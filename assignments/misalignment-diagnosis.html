@@ -1,0 +1,242 @@
+<title>AI Misalignment Diagnosis — Psychology AI Integration Pilot</title>
+<link rel="stylesheet" href="../shared.css">
+
+<div class="topbar">
+  <a class="mast" href="../index.html">Psychology <span>×</span> AI Integration Pilot</a>
+  <nav class="toc" id="toc">
+    <a href="../index.html">Overview</a>
+    <a href="../roadmap.html">Roadmap</a>
+    <a href="../fall-2026.html">Fall 2026</a>
+    <a href="../assessment.html">Assessment</a>
+    <a href="../activities.html" class="current">Activities</a>
+    <a href="../bootcamp.html">Bootcamp</a>
+    <a href="../competencies.html">Competencies</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<div class="page">
+  <p><a href="../activities.html">&larr; Back to Activities &amp; Assignments</a></p>
+  <div class="page-head"><h1 class="page-title">AI Misalignment Diagnosis</h1></div>
+  <p class="page-sub">Status: Final &middot; Category: AI Literacy &middot; Last updated: 2026-07-11</p>
+
+  <h2 class="section-title">Instructor Overview</h2>
+  <div class="tablewrap">
+    <table>
+      <tbody>
+        <tr><td><strong>Recommended course</strong></td><td>Introductory Psychology, Research Methods, Cognitive Psychology, any course where students regularly use AI for writing or studying</td></tr>
+        <tr><td><strong>Best placement</strong></td><td>After students have had several AI interactions and experienced outputs that missed the mark; mid-unit or end-of-unit</td></tr>
+        <tr><td><strong>Estimated time</strong></td><td>50 to 65 minutes</td></tr>
+        <tr><td><strong>AI proficiency stage</strong></td><td>AI Literacy</td></tr>
+        <tr><td><strong>Psychology content</strong></td><td>Communication, pragmatics, audience design, problem representation, metacognition, attribution</td></tr>
+        <tr><td><strong>Workforce-ready skills</strong></td><td>Diagnostic reasoning, professional communication, problem representation, tool management, critical evaluation</td></tr>
+        <tr><td><strong>APA Guidelines 3.0 alignment</strong></td><td>APA Guidelines 3.0 Goals 1, 2, and 4</td></tr>
+        <tr><td><strong>Skillful Psychology Student alignment</strong></td><td>Cognitive, Communication, Technological</td></tr>
+        <tr><td><strong>IPI alignment, if Intro Psychology</strong></td><td>Psychological science, research methods, applications</td></tr>
+        <tr><td><strong>NACE Career Readiness alignment</strong></td><td>Critical Thinking, Technology, Communication, Professionalism</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">Why Use This Assignment?</h2>
+  <p>When AI produces unhelpful output, users often resubmit nearly the same prompt, repeatedly add detail without a diagnosis, or conclude that AI cannot help. None of those responses distinguishes <em>why</em> the interaction failed.</p>
+  <p>A mismatch between the user's goal and the task communicated in the prompt is one important and often repairable failure source. It is not the only one. AI may also fail because the model lacks relevant knowledge or tool access, fabricates information, cannot perform the task reliably, or should not have been used for the task at all. Good diagnostic reasoning begins by separating these possibilities.</p>
+  <p>This assignment teaches a seven-category taxonomy for <strong>interaction misalignment</strong>: cases in which the prompt, context, audience, standards, role, constraints, or requested form do not match what the user actually needs. Students first decide whether a failure belongs in that taxonomy. When it does, they identify the most explanatory type and design a targeted repair rather than guessing.</p>
+  <p>The psychology is direct. Human communicators routinely overestimate how much context, purpose, and background knowledge they have made available to a receiver. Audience design and perspective-taking research help explain why omitted assumptions feel obvious to the sender. Problem-representation research shows that how a task is framed constrains which solutions become available. These are useful analogies for prompting, but the analogy has a boundary: an AI system does not possess a human perspective, beliefs, or intentions.</p>
+  <div class="pullquote">A prompt represents the problem you want solved. A capable answer to the wrong representation is still the wrong answer for your goal.</div>
+
+  <h2 class="section-title">Student Learning Outcomes</h2>
+  <p>By completing this assignment, students will be able to:</p>
+  <ol>
+    <li>Distinguish a prompt-repairable interaction misalignment from a model limitation, factual failure, missing tool access, or inappropriate use case.</li>
+    <li>Identify and name the most explanatory type of interaction misalignment using a seven-category diagnostic taxonomy.</li>
+    <li>Explain why that misalignment produced the specific output it did.</li>
+    <li>Repair the original prompt based on the diagnosis and explain what changed and why.</li>
+    <li>Apply audience design, problem representation, or pragmatics to explain why communication gaps are predictable while respecting the limits of the human–AI analogy.</li>
+  </ol>
+
+  <h2 class="section-title">Student Assignment Sheet</h2>
+  <h3>Purpose</h3>
+  <p>When AI gives you something you did not need, the first question is not automatically, "How should I rewrite the prompt?" The model may be missing information or tool access, making factual errors, or being used for a task it cannot perform reliably. But sometimes the system solved a different problem because the prompt did not adequately represent your actual goal. That is an interaction misalignment. This assignment teaches you to distinguish those cases and diagnose them precisely.</p>
+
+  <h3>Diagnostic Gate: Is This a Prompt-Repair Problem?</h3>
+  <p>Before using the taxonomy, ask:</p>
+  <ol>
+    <li><strong>Did the output respond reasonably to the prompt as written, but not to the user's unstated need?</strong> This points toward interaction misalignment.</li>
+    <li><strong>Would adding or changing task information plausibly fix the problem?</strong> This points toward interaction misalignment.</li>
+    <li><strong>Is the problem instead fabrication, stale or missing knowledge, unavailable tool access, inability to perform the task reliably, or a task that should remain human?</strong> A better prompt may not fix it.</li>
+  </ol>
+  <p>The seven types below diagnose the first class of failures. They do not explain every bad AI output.</p>
+
+  <h3>The Misalignment Taxonomy</h3>
+  <p><strong>1. Wrong task</strong> — AI solved a different task than the one you needed. You asked for a summary and got an outline. You asked for feedback and got a rewrite. You asked for a critique and got encouragement.</p>
+  <p><em>Signal:</em> The output is well-executed, but it is not the operation you needed.</p>
+  <p><strong>2. Missing context</strong> — AI lacked information needed to give a useful response. The topic is specific, locally defined, or embedded in a situation that was not included in the prompt.</p>
+  <p><em>Signal:</em> The output is generic where you needed something specific.</p>
+  <p><strong>3. Wrong audience</strong> — AI wrote for the wrong reader. The expertise level, vocabulary, purpose, or assumed prior knowledge does not match the actual audience.</p>
+  <p><em>Signal:</em> The output may be accurate but inaccessible, condescending, or pitched at the wrong level.</p>
+  <p><strong>4. Wrong evaluation or evidence standard</strong> — AI used the wrong criteria for judging or supporting the work. You needed an APA-requirements audit and received general improvement advice. You needed peer-reviewed evidence and received an unsupported assertion. You needed a rubric-based judgment and received stylistic preferences.</p>
+  <p><em>Signal:</em> The response may sound useful or authoritative, but it does not apply the standard that determines whether the work succeeds.</p>
+  <p><strong>5. Wrong role or register</strong> — AI adopted the wrong voice, tone, form, or working relationship. It produced a formal essay when you needed decision notes. It gave reassurance when you needed direct evaluation. It answered as a generalist when you needed discipline-specific scrutiny.</p>
+  <p><em>Signal:</em> The content is roughly relevant, but the form or stance is wrong for what you are doing with it.</p>
+  <p><strong>6. Missing constraints</strong> — The prompt omitted limits such as length, format, exclusions, required elements, or what the AI must not do. The system filled the unconstrained space with a plausible guess.</p>
+  <p><em>Signal:</em> The output is larger, more complex, or differently shaped than needed.</p>
+  <p><strong>7. Asked for a product when you needed a process</strong> — You asked AI to produce a final answer when the learning goal required questions, a scaffold, retrieval, feedback, or a sequence of decisions you could perform and defend yourself.</p>
+  <p><em>Signal:</em> The output may look successful, but it bypasses the thinking or authorship the task was meant to develop.</p>
+
+  <h3>Task</h3>
+  <p><strong>Part 1 — Diagnose Three Cases (25 to 30 minutes)</strong></p>
+  <p>Below are three AI interactions that did not fully serve the user. For each case:</p>
+  <ol>
+    <li>Apply the diagnostic gate: explain briefly why this is primarily an interaction misalignment rather than a model limitation or unrelated factual failure.</li>
+    <li>Identify the misalignment type from the taxonomy. More than one type may apply; choose the one that best explains the core problem.</li>
+    <li>Write two to three sentences explaining why this misalignment produced the specific output shown.</li>
+    <li>Write a repaired prompt that addresses the diagnosis.</li>
+    <li>Write one sentence explaining what you changed and why.</li>
+    <li>If your diagnosis depends on whether a factual course-content claim is accurate, verify that claim with a course-approved source and record the source and verdict.</li>
+  </ol>
+
+  <p><strong>Case 1</strong></p>
+  <p><em>Original prompt:</em></p>
+  <div class="pullquote">Help me understand cognitive dissonance.</div>
+  <p><em>AI response (excerpt):</em></p>
+  <div class="pullquote">Cognitive dissonance is a psychological phenomenon first described by Leon Festinger in 1957. It occurs when a person holds conflicting cognitions that produce psychological discomfort. People may reduce this discomfort by changing a belief, adding information that supports one side, or reducing the importance of the conflict. For example, a person who smokes but knows smoking is harmful may rationalize the behavior by saying they do not smoke very much or will quit soon.</div>
+  <p><em>What the student actually needed:</em> A concise explanation they could use to write an exam answer comparing cognitive dissonance with self-perception theory.</p>
+
+  <p><strong>Case 2</strong></p>
+  <p><em>Original prompt:</em></p>
+  <div class="pullquote">Give me feedback on my research methods section.<br><br>Participants were recruited through convenience sampling from an undergraduate psychology pool. A total of 47 participants completed the survey. Surveys were administered online. Data were analyzed using SPSS.</div>
+  <p><em>AI response (excerpt):</em></p>
+  <div class="pullquote">Your methods section is a good start. To strengthen it, consider adding more detail about inclusion and exclusion criteria, the survey instrument, ethical approval, the statistical tests employed, and the handling of missing data. You could also improve the flow by combining some of the short sentences and adding transitions.</div>
+  <p><em>What the student actually needed:</em> Feedback on whether the section meets the specific APA and course-assignment requirements provided by the instructor, not a general list of possible improvements.</p>
+
+  <p><strong>Case 3</strong></p>
+  <p><em>Original prompt:</em></p>
+  <div class="pullquote">Write a paragraph explaining the bystander effect for my psychology paper.</div>
+  <p><em>AI response:</em></p>
+  <div class="pullquote">The bystander effect refers to findings that people may be less likely to help when other observers are present. Two commonly discussed mechanisms are diffusion of responsibility, in which each person feels less personally responsible for acting, and pluralistic ignorance, in which people use others' apparent inaction as evidence that the situation is not an emergency. The effect is not uniform across situations; features such as ambiguity, danger, group relationships, and relevant expertise can alter helping behavior.</div>
+  <p><em>What the student actually needed:</em> Support developing a paragraph that fits their own paper—but the student has not yet established the paper's argument, scope, evidence plan, or voice.</p>
+
+  <p><strong>Part 2 — Diagnose Your Own (15 minutes)</strong></p>
+  <p>Think of a time in the past month when AI gave you output that was not useful—output you did not use, had to heavily revise, or discarded. If you cannot recall one, create a plausible scenario based on something you might have done.</p>
+  <p>Describe:</p>
+  <ol>
+    <li>What you asked for—the approximate prompt</li>
+    <li>What you got</li>
+    <li>What you actually needed</li>
+    <li>Whether the failure is primarily an interaction misalignment or a different problem such as fabrication, model limitation, missing tool access, or inappropriate AI use</li>
+    <li>If it is an interaction misalignment, which type best explains the gap</li>
+    <li>What a repaired prompt would look like—or, if prompting is not the solution, what you should do instead</li>
+  </ol>
+
+  <p><strong>Part 3 — Reflection (10 minutes)</strong></p>
+  <p>Write 150 to 200 words addressing:</p>
+  <ol>
+    <li>Which misalignment type do you think is most common in your own AI use? Why?</li>
+    <li>Apply one of the following concepts: <em>audience design or perspective-taking</em> (senders often omit information that feels obvious to them), <em>problem representation</em> (how framing a problem constrains the solutions considered), or <em>pragmatics</em> (the gap between literal wording and intended meaning). Explain the connection precisely and state one limit of applying the human communication concept to an AI system.</li>
+    <li>Which failure would be hardest to recognize before sending a prompt: one of the seven misalignments, a model limitation, or an inappropriate use case? Why?</li>
+  </ol>
+
+  <h3>Guiding Questions</h3>
+  <ul>
+    <li>When repairing the prompts in Part 1, what information did the user possess but fail to externalize?</li>
+    <li>Type 7 is different from the others. Why can receiving a polished product conceal the loss of learning or authorship?</li>
+    <li>How is prompting similar to audience design in human communication, and where does that analogy break down?</li>
+    <li>What evidence would tell you to stop revising a prompt and choose a different tool or a human-only process?</li>
+  </ul>
+
+  <h2 class="section-title">AI Use Rules</h2>
+  <p><strong>AI use allowed:</strong> Students may use AI only to help generate a plausible failed-interaction scenario for Part 2 when they cannot recall a genuine one. AI may not perform the diagnosis, write repaired prompts, or compose the reflection.</p>
+  <p><strong>Not allowed:</strong> Students may not ask AI to diagnose its own output, suggest repairs, or explain why a prompt failed. The assignment assesses the student's diagnostic reasoning.</p>
+  <p><strong>Required disclosure:</strong> I used AI to [describe any use in Part 2 scenario generation, or write "none"]. The diagnostic gate decisions, classifications, repaired prompts, alternatives, and reflection are my own work.</p>
+  <p><strong>Privacy rule:</strong> Do not enter personal, student, client, patient, participant, workplace, family, or otherwise sensitive information into public AI tools.</p>
+  <p><strong>Verification rule:</strong> You do not need to fact-check every sentence in the provided outputs. Verify any factual course-content claim on which your diagnosis, repaired prompt, or final judgment depends. Record the source and verdict when verification is needed. A repaired prompt is evaluated against the user's stated goal, not against the confidence or fluency of a new AI response.</p>
+  <p><strong>Resource rule:</strong> Use the simplest prompt that accomplishes the task. Avoid unnecessary back-and-forth, vague prompts that require multiple correction rounds, and full regenerations when targeted edits will do. Efficient AI use is a form of environmental responsibility.</p>
+  <p><strong>Learning protection rule:</strong> The diagnostic reasoning must be your own. An assignment in which AI diagnoses its own failures does not demonstrate the student's judgment.</p>
+
+  <h2 class="section-title">Criteria for Success</h2>
+  <p>Strong work will:</p>
+  <ul>
+    <li>use the diagnostic gate to distinguish prompt-repairable misalignment from other failure sources</li>
+    <li>select the most explanatory misalignment type for each provided case rather than merely choosing a plausible label</li>
+    <li>explain the mechanism—why that misalignment produced that particular output</li>
+    <li>write repaired prompts that directly address the diagnosis, or correctly explain why prompting is not the solution</li>
+    <li>verify factual claims only when the diagnosis or repair depends on them and report the result accurately</li>
+    <li>apply a psychological concept precisely while identifying a limit of the human–AI analogy</li>
+  </ul>
+
+  <h2 class="section-title">Student Submission Checklist</h2>
+  <ul>
+    <li>Case 1 gate decision, diagnosis, explanation, repaired prompt, and change rationale</li>
+    <li>Case 2 gate decision, diagnosis, explanation, repaired prompt, and change rationale</li>
+    <li>Case 3 gate decision, diagnosis, explanation, repaired prompt, and change rationale</li>
+    <li>Any conditional verification record required by a diagnosis</li>
+    <li>Part 2 self-diagnosis—all six elements</li>
+    <li>Reflection—150 to 200 words</li>
+    <li>AI disclosure statement</li>
+  </ul>
+
+  <h2 class="section-title">Rubric</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Criterion</th><th>Excellent</th><th>Satisfactory</th><th>Needs Revision</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnostic gate</td><td>Correctly distinguishes interaction misalignment from model, factual, access, or task-selection failures and explains the distinction.</td><td>Makes a plausible distinction but the explanation is thin or inconsistent.</td><td>Assumes every failure is caused by prompting or does not apply the gate.</td></tr>
+        <tr><td>Diagnosis accuracy</td><td>Identifies the most explanatory misalignment type for each case; where multiple types apply, explains why one is primary.</td><td>Identifies a plausible type for each case but may miss the most explanatory one.</td><td>Uses a vague label such as "bad prompt," selects a type inconsistent with the case, or applies the taxonomy to a non-misalignment failure without justification.</td></tr>
+        <tr><td>Mechanism explanation</td><td>Explains specifically how the identified mismatch produced the observed output.</td><td>Explanation is present but general and could apply to several types.</td><td>Explanation is absent or merely restates the category name.</td></tr>
+        <tr><td>Repair or alternative</td><td>Repaired prompts directly address the diagnosis; when prompting is not the solution, proposes an appropriate alternative tool or human process.</td><td>Repairs or alternatives are plausible but do not fully resolve the diagnosed problem.</td><td>Makes only cosmetic wording changes or persists with AI when the diagnosed problem requires another approach.</td></tr>
+        <tr><td>Self-diagnosis and verification</td><td>Part 2 is coherent and nontrivial; failure source, category, repair or alternative, and any needed verification are mutually consistent.</td><td>Part 2 is complete but vague, or verification is weakly documented when needed.</td><td>Part 2 is absent, trivial, internally inconsistent, or relies on unchecked factual claims central to the diagnosis.</td></tr>
+        <tr><td>Psychological concept application</td><td>Accurately applies audience design, problem representation, or pragmatics and states a meaningful limit of the human–AI analogy.</td><td>Concept is named and applied, but the connection or boundary is general.</td><td>Concept is mentioned without application or treats AI as having human beliefs, intentions, or perspective.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">Instructor Notes</h2>
+  <p><strong>Why a diagnostic gate matters.</strong> Prompt revision is useful only when the failure is actually prompt-repairable. Students should learn to recognize hallucination, unavailable tool access, model incapacity, and inappropriate delegation as separate problems. Otherwise, "prompt engineering" becomes a universal remedy and user responsibility becomes user blame.</p>
+  <p><strong>Why a taxonomy matters.</strong> Many prompt-repair exercises ask students to "improve" a bad prompt without naming what was wrong. The result may be effective in one case but difficult to transfer. The taxonomy supports a more general habit: identify the mismatch before selecting the repair. The categories are practical heuristics, not a validated exhaustive taxonomy of AI failure.</p>
+  <p><strong>On Case 3 and Type 7.</strong> This remains the most important and most easily missed case. The AI did what the student explicitly requested and produced a reasonable paragraph. The problem lies in the relation between the request and the learning task: the student has not yet developed the argument, evidence plan, or voice that should determine the paragraph. A polished output can therefore conceal a process failure. The case deliberately avoids the disputed popular account of the Kitty Genovese murder so that historical-source controversy does not distract from the diagnosis.</p>
+  <p><strong>On multiple misalignment types.</strong> Cases 1 and 2 intentionally admit more than one diagnosis. Case 1 is primarily Type 2 because the comparison target was omitted, but Type 1 is defensible because "understand" did not specify the operation needed. Case 2 is primarily Type 4 because the relevant APA and course criteria were not supplied or requested; Type 1 is also plausible because general feedback is not a compliance audit. Disagreement is productive when students connect the selected category to a different repair.</p>
+  <p><strong>The psychology connection—and its boundary.</strong> Human communication research shows that senders overestimate how much context and intention receivers can recover. Audience design, perspective-taking, and the curse of knowledge provide useful ways to understand why users omit information that feels obvious. These concepts describe human cognition. They should be presented as analogies for designing external instructions, not evidence that an AI system has a human mind, perspective, or communicative intention.</p>
+  <p><strong>Pragmatics as an alternative frame.</strong> Human speakers use context and cooperative expectations to infer meaning beyond literal wording. AI systems can also produce responses that fit a statistically likely interpretation of an underspecified prompt, but they do not intentionally cooperate or infer meaning through human pragmatic cognition. The pedagogical value lies in asking what information the prompt made available, not in treating the model as a conversational person.</p>
+  <p><strong>Using student-generated cases.</strong> Consider collecting Part 2 scenarios anonymously for later discussion. Include both prompt-repairable and non-prompt-repairable cases so students practice the gate rather than assuming the taxonomy always applies.</p>
+
+  <h2 class="section-title">Optional Variations</h2>
+  <ul>
+    <li><strong>Small group version:</strong> Groups diagnose one case independently, then compare both gate decisions and primary categories before class discussion.</li>
+    <li><strong>Live diagnosis:</strong> The instructor presents a real failed AI interaction and models uncertainty about whether the failure is prompt, model, tool-access, factual, or task-selection related.</li>
+    <li><strong>Sequential repair:</strong> Students optionally run one repaired prompt, compare the result with the stated goal, and stop after one test. A failed repair may indicate that the original diagnosis was wrong or that prompting is not the solution. Adds 10 to 15 minutes.</li>
+    <li><strong>Taxonomy challenge:</strong> Students propose either an eighth interaction-misalignment type or a non-misalignment failure category that the gate must detect.</li>
+  </ul>
+
+  <h2 class="section-title">Responsible AI Focus Tags</h2>
+  <div class="taglist">
+    <span class="tag">Human oversight</span>
+    <span class="tag">Appropriate reliance</span>
+    <span class="tag">Critical evaluation</span>
+    <span class="tag">Learning protection</span>
+    <span class="tag">Transparency</span>
+    <span class="tag">Communication</span>
+    <span class="tag">Resource-aware use</span>
+  </div>
+
+  <h2 class="section-title">Design References</h2>
+  <ul>
+    <li>Grice, H. P. (1975). Logic and conversation. In P. Cole &amp; J. Morgan (Eds.), <em>Syntax and semantics: Vol. 3. Speech acts</em> (pp. 41–58). Academic Press.</li>
+    <li>Keysar, B., &amp; Henly, A. S. (2002). Speakers' overestimation of their effectiveness. <em>Psychological Science, 13</em>(3), 207–212.</li>
+    <li>Nickerson, R. S. (1999). How we know—and sometimes misjudge—what others know: Imputing one's own knowledge to others. <em>Psychological Bulletin, 125</em>(6), 737–759.</li>
+    <li>Duncker, K. (1945). On problem-solving. <em>Psychological Monographs, 58</em>(5).</li>
+    <li>Flavell, J. H. (1979). Metacognition and cognitive monitoring: A new area of cognitive-developmental inquiry. <em>American Psychologist, 34</em>(10), 906–911.</li>
+    <li>Festinger, L. (1957). <em>A theory of cognitive dissonance.</em> Stanford University Press.</li>
+    <li>Darley, J. M., &amp; Latané, B. (1968). Bystander intervention in emergencies: Diffusion of responsibility. <em>Journal of Personality and Social Psychology, 8</em>(4), 377–383.</li>
+    <li>Winkelmes, M.-A. (2013). Transparency in teaching: Faculty share data and improve students' learning. <em>Liberal Education, 99</em>(2).</li>
+    <li>Winkelmes, M.-A., Bernacki, M., Butler, J., Zochowski, M., Golanics, J., &amp; Harriss Weavil, K. (2016). A teaching intervention that increases underserved college students' success. <em>Peer Review, 18</em>(1/2).</li>
+    <li>American Psychological Association. (2023). <em>Guidelines for the undergraduate psychology major 3.0.</em> American Psychological Association.</li>
+    <li>Naufel, K. Z., Appleby, D. C., Young, J., Van Kirk, J. F., Spencer, S. M., Rudmann, J., Carducci, B. J., Hettich, P., &amp; Richmond, A. S. (2018). <em>The skillful psychology student: Prepared for success in the 21st-century workplace.</em> American Psychological Association.</li>
+  </ul>
+</div>
+
+<footer class="pagefoot">
+  <div class="snap">Snapshot as of 2026-08-01</div>
+  <p>Source: STP Taskforce Assignments (canonical working repo).</p>
+</footer>

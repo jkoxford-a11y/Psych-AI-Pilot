@@ -1,0 +1,195 @@
+<title>AI Competencies: What You and Your Students Need — Psychology AI Integration Pilot</title>
+<link rel="stylesheet" href="shared.css">
+
+<div class="topbar">
+  <a class="mast" href="index.html">Psychology <span>×</span> AI Integration Pilot</a>
+  <nav class="toc" id="toc">
+    <a href="index.html">Overview</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="fall-2026.html">Fall 2026</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="activities.html">Activities</a>
+    <a href="bootcamp.html">Bootcamp</a>
+    <a href="competencies.html" class="current">Competencies</a>
+    <a href="resources.html">Resources</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<div class="page">
+  <div class="page-head"><h1 class="page-title">AI Competencies: What You and Your Students Need</h1></div>
+  <p class="page-sub">The scaffolding connecting faculty and student AI literacy — one shared vocabulary, so a
+  conversation about AI use doesn't break down over mismatched terms.</p>
+
+  <p>The pilot works on a simple premise: you and your students need an <strong>overlapping foundation</strong>
+  plus <strong>role-specific skills</strong> — taught in the same vocabulary, so you can talk with your students
+  about AI use in a common language. If you learn "context windows" and they learn "AI memory," you can't have
+  that conversation.</p>
+  <p>Below: the four concepts everyone needs, what students need beyond that, what you need beyond that, and
+  how we'll check that it's working — for students <em>and</em> for us. We're holding ourselves to the same
+  standard we hold them to.</p>
+
+  <h2 class="section-title">The Shared Core: four concepts everyone needs</h2>
+  <p>These four ideas do most of the work. Nearly every AI success or failure you'll encounter this semester
+  traces back to one of them.</p>
+
+  <div class="concept">
+    <h3><span class="concept-num">1</span>Context is everything</h3>
+    <p>The model only knows two things: its training and what's in the <strong>current conversation</strong>.
+    That's it. This one idea explains almost everything else:</p>
+    <ul>
+      <li>Custom bots work because instructions + knowledge files are just <strong>pre-loaded, persistent context</strong></li>
+      <li>Long conversations degrade because context has limits</li>
+      <li>The bot "forgot" what you told it last week because <strong>nothing carries over between sessions automatically</strong></li>
+      <li>Uploading your syllabus changes the answers because now it's <em>in the context</em></li>
+    </ul>
+    <p>If you internalize "the model's behavior is a function of what's in its context right now," you can debug
+    most of your own problems.</p>
+    <details class="disclosure">
+      <summary>What it looks like</summary>
+      <div class="naive-competent">
+        <div class="nc-block naive"><span class="nc-label">Naive</span>Forty messages into one chat, the answers get worse and start contradicting earlier ones — and the user keeps pushing. Or: "Why doesn't it remember the rubric I gave it last Tuesday?"</div>
+        <div class="nc-block competent"><span class="nc-label">Competent</span>Starts a fresh chat for each new task and re-supplies what matters. Anything needed <em>every time</em> (rubric, course policies, tone) goes into a custom bot's instructions or knowledge files — that's the entire reason custom bots exist.</div>
+      </div>
+    </details>
+  </div>
+
+  <div class="concept">
+    <h3><span class="concept-num">2</span>Generated, not verified</h3>
+    <p>The model <strong>composes plausible text</strong>; it does not know whether that text is true. Even when
+    a tool searches the web or reads your uploaded knowledge files, it is still <em>composing</em> an answer
+    from whatever it finds — and that composition step is where fabricated citations, misquotes, and confident
+    errors come from. This is why a fluent, authoritative tone carries <strong>zero evidential weight</strong>,
+    and why a bot with your course files attached still needs spot-checking. Treat every output as an unverified
+    claim, not a fact.</p>
+    <details class="disclosure">
+      <summary>What it looks like</summary>
+      <div class="naive-competent">
+        <div class="nc-block naive"><span class="nc-label">Naive</span>"Give me five sources on stereotype threat" → pastes them straight into the lit review. Two don't exist; one is real but argues the opposite.</div>
+        <div class="nc-block competent"><span class="nc-label">Competent</span>Treats those five sources as <em>leads</em>, not references — checks each in PsycINFO before using it. Asks "which claims in this answer carry weight, and have I verified those?" as a reflex.</div>
+      </div>
+    </details>
+  </div>
+
+  <div class="concept">
+    <h3><span class="concept-num">3</span>It adapts to you</h3>
+    <p>The model shapes its responses to what you signal you want. If you push back, it often caves — not
+    because you were right, but because it's trained to please. <strong>Agreement is not validation.</strong>
+    How you phrase a question shapes the answer you get. This matters when you ask it to check your exam
+    questions, and it matters when your students ask it to check their essay arguments.</p>
+    <details class="disclosure">
+      <summary>What it looks like</summary>
+      <div class="naive-competent">
+        <div class="nc-block naive"><span class="nc-label">Naive</span>"I told it my interpretation of the interaction effect and it agreed, so I'm confident." Or: pushed back twice, the model reversed itself, and the reversal was taken as being right.</div>
+        <div class="nc-block competent"><span class="nc-label">Competent</span>Withholds their own position — "A colleague interprets this interaction as X; evaluate that claim." Asks for the strongest case <em>against</em>. And when the model reverses under pushback, asks: "What new information changed your answer?" If it can't say, the reversal was compliance, not correction.</div>
+      </div>
+    </details>
+  </div>
+
+  <div class="concept">
+    <h3><span class="concept-num">4</span>Vague in, generic out</h3>
+    <p>The model can't read minds. Useful output requires specification: <strong>role, task, context,
+    constraints, format.</strong> This isn't "prompt engineering tricks" — it's the same skill as writing a
+    clear assignment prompt for students.</p>
+    <details class="disclosure">
+      <summary>What it looks like</summary>
+      <div class="naive-competent">
+        <div class="nc-block naive"><span class="nc-label">Naive</span>"Give me feedback on this assignment." → generic praise plus boilerplate suggestions.</div>
+        <div class="nc-block competent"><span class="nc-label">Competent</span>"You're reviewing a 200-level psych methods assignment. Check <em>only</em> whether the instructions make the deliverable, the grading criteria, and the AI-use policy unambiguous to a first-generation sophomore. List problems as bullets; don't rewrite anything."</div>
+      </div>
+    </details>
+  </div>
+
+  <h2 class="section-title">What your students need (beyond the core)</h2>
+  <p>You don't need to master this layer — you need to know it exists, because your course policies and
+  assignments will lean on it. Full student-facing materials live in the <a href="activities.html">Activities &amp; Assignments</a> page's Student-Facing Use Cases section.</p>
+  <ul>
+    <li><strong>Learning vs. offloading.</strong> When does AI use build understanding, and when does it replace it? The struggle is the mechanism — outsource the struggle and you outsource the learning (this is desirable difficulty, straight from our own literature). Students need to make this call task-by-task, and our assignments should force the question.</li>
+    <li><strong>Integrity as process, not just rules.</strong> What disclosure looks like, what "AI-assisted" means in <em>your</em> course, and how to document their process.</li>
+    <li><strong>Verification as a workflow.</strong> Not "AI can be wrong" as a warning, but actually chasing down a citation, actually testing a claimed fact. One exercise where they catch the AI confidently lying is worth a semester of disclaimers.</li>
+    <li><strong>Voice and ownership.</strong> Refining their own draft is a different activity from generating one. Heavy AI drafting homogenizes student writing — and they're still <em>developing</em> a voice, unlike us.</li>
+  </ul>
+
+  <h2 class="section-title">What you need (beyond the core)</h2>
+  <p>Students are users. You are a <strong>builder and delegator</strong>. That's the difference, and it's why
+  your layer looks different.</p>
+
+  <h3>System prompts are course design</h3>
+  <p>A custom bot in BoodleBox = instructions + knowledge files = context that's loaded every time, for every
+  student. Writing a bot's instructions is a course-design act, not a technical one. See the
+  <a href="bootcamp.html">Bootcamp</a> page's module 4 for the hands-on build guide.</p>
+  <details class="disclosure">
+    <summary>What a real instruction block looks like</summary>
+    <div class="pullquote">"You are a study coach for PSYC 101 at Columbia College. Your job is to help students retrieve and explain course concepts — never to give direct answers to assignment or exam questions. Lead with a guiding question before any explanation. Use only the attached course materials; if something isn't in them, say so. If a student asks you to write their assignment, decline and point them to the course AI policy."</div>
+    <p>Four sentences: <strong>role, method, source boundary, integrity boundary.</strong> That's course design, not programming.</p>
+  </details>
+
+  <h3>Knowledge files have limits</h3>
+  <p>Upload your syllabus, rubrics, and slides — but know this: <strong>the bot will happily generate beyond
+  your files</strong> using general knowledge unless you explicitly tell it not to. Add an instruction like:</p>
+  <div class="pullquote">"Only answer from the attached course materials. If the answer isn't in them, say 'That's not in the course materials' rather than filling in from general knowledge."</div>
+  <p>Honest caveat: this <em>reduces</em> the problem substantially but does not eliminate it. Spot-check your
+  bot against your materials.</p>
+  <p><strong>The spot-check:</strong> ask three questions whose answers <em>are</em> in your files and two whose
+  answers are <em>not</em>. It should get the first three right and <strong>decline</strong> the last two. If it
+  answers the last two fluently anyway, tighten the instruction and re-test.</p>
+
+  <h3>Assessment reality</h3>
+  <p>Current AI — including agentic tools that can browse and operate a web page — can complete most
+  traditional take-home assessments, and detection tools are not reliable enough to build policy on. The
+  productive move is <strong>designing forward</strong> (assignments where AI use is either structurally limited
+  or explicitly built in), not policing backward. In this pilot, designing forward looks like: paper-based
+  exams, split-screen quiz formats, process portfolios, and assignments where <em>critiquing AI output is the
+  deliverable</em>. We learned this the hard way in Fall 2025.</p>
+
+  <h3>Test before deploy</h3>
+  <p>A student who trusts a hallucination hurts their own grade. A faculty member who deploys a bot that
+  hallucinates course policy hurts <strong>forty students at once</strong>. Before your bot goes live: probe it
+  with the five most confused questions a struggling student would actually ask, and check the answers against
+  your syllabus.</p>
+  <p>A ready-made probe set, if you want one:</p>
+  <ol class="probe-list">
+    <li>A policy question with one precise answer ("Can I still pass if I miss two labs?")</li>
+    <li>The concept your class reliably confuses (your course's version of "negative reinforcement = punishment")</li>
+    <li>A direct request for an assignment answer — <em>it should decline</em></li>
+    <li>A question just outside your materials — <em>it should say it doesn't know</em></li>
+    <li>A plausible false premise ("Since the textbook says correlation proves causation in longitudinal designs…") — <em>it should push back</em></li>
+  </ol>
+
+  <h2 class="section-title">How we'll know it's working</h2>
+
+  <h3>For students</h3>
+  <p>The pilot's assessment plan already covers this — see <a href="assessment.html">Assessment Approach</a>:
+  validated AI literacy measures and calibration checks. We're measuring actual capability, not self-reported
+  comfort.</p>
+
+  <h3>For us</h3>
+  <p>Same principle — and note the design logic: every competency on this page is written to be
+  <strong>observable</strong>, a behavior demonstrated under specified conditions, not a feeling of confidence.
+  That's backward design applied to us. Two parts:</p>
+  <ol>
+    <li><strong>Brief self-assessment</strong> at the start and end of the semester — where you rate your own AI competence across the areas above. (A validated faculty instrument is under evaluation for this — see the Faculty AI Scale note referenced in the working repo; details to come.)</li>
+    <li><strong>Three performance checkpoints</strong> — because self-rated confidence and actual skill are only loosely related, and we of all people should respect that finding:
+      <ul>
+        <li><strong>Build &amp; break your own bot.</strong> Deploy a course bot, then adversarially test it with the five-probe set above before it goes live. <em>Done well means:</em> the bot passes all five probes — or you can show what you changed after it failed one.</li>
+        <li><strong>Redesign one assessment.</strong> Take one existing assignment and redesign it for the AI era — AI-limited or AI-integrated, your call, with a one-paragraph rationale. <em>Done well means:</em> the rationale names what the old version assumed about AI that is no longer true, and what the new version does about it.</li>
+        <li><strong>Catch the hallucination.</strong> Correctly identify and verify a planted error in an AI-generated course summary. <em>Done well means:</em> you find the error <strong>and</strong> can name the source that settles it.</li>
+      </ul>
+    </li>
+  </ol>
+  <p>None of this is evaluative in a personnel sense. It's the same standard we're asking of students:
+  <em>show</em> the competence, don't just report it.</p>
+
+  <h2 class="section-title">Where to go next</h2>
+  <ul>
+    <li><a href="bootcamp.html">Faculty AI Bootcamp</a> — the full modular walkthrough</li>
+    <li>Bot Toolkit (puzzle-piece system prompt composer + templates) — referenced in the source material, not yet part of this site</li>
+    <li><a href="activities.html">Student-Facing Use Cases</a> — what your students will see</li>
+    <li>Questions → Jon</li>
+  </ul>
+</div>
+
+<footer class="pagefoot">
+  <div class="snap">Snapshot as of 2026-08-01</div>
+  <p>Source: "AI Competencies: What You and Your Students Need," Imagination is the Key (Notion), 2026-07-08.</p>
+</footer>
