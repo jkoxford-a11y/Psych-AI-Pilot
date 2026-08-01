@@ -183,6 +183,7 @@ tr:last-child td { border-bottom: none; }
 @media (prefers-color-scheme: dark) { .statuspill.done { color: var(--accent); } }
 :root[data-theme="dark"] .statuspill.done { color: var(--accent); }
 .statuspill.progress { background: var(--tier3-soft); color: var(--tier3); }
+.statuspill.idea { background: var(--bg-alt); color: var(--ink-faint); border: 1px solid var(--line); }
 
 footer.pagefoot {
   max-width: 720px; margin: 0 auto; padding: 40px 28px 90px;

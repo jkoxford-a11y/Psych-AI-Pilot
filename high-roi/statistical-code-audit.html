@@ -1,0 +1,78 @@
+<title>The Statistical Code Audit: Statistics &amp; Methodological Reasoning — Psychology AI Integration Pilot</title>
+<link rel="stylesheet" href="../shared.css">
+
+<div class="topbar">
+  <a class="mast" href="../index.html">Psychology <span>×</span> AI Integration Pilot</a>
+  <nav class="toc" id="toc">
+    <a href="../index.html">Overview</a>
+    <a href="../roadmap.html">Roadmap</a>
+    <a href="../fall-2026.html">Fall 2026</a>
+    <a href="../assessment.html">Assessment</a>
+    <a href="../activities.html" class="current">Activities</a>
+    <a href="../bootcamp.html">Bootcamp</a>
+    <a href="../competencies.html">Competencies</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<div class="page">
+  <p><a href="../activities.html">&larr; Back to Activities</a></p>
+  <div class="page-head"><h1 class="page-title">The Statistical Code Audit: Statistics &amp; Methodological Reasoning</h1><span class="statuspill progress">drafted</span></div>
+  <p class="page-sub">High-ROI Assignment Bank &middot; Best for Statistics, Quantitative Research Methods, Psychological Testing, Independent Research</p>
+
+  <div class="pullquote">Status: drafted, not yet adopted for the pilot. Rewritten by the pilot lead (with ChatGPT) 2026-08-01 from the original High-ROI Assignment Bank concept — the deliverable structure and grading approach below are new, not the original Notion text.</div>
+
+  <h2 class="section-title">The Concept</h2>
+  <p>Students can increasingly ask AI to generate R, Python, SPSS syntax, or other statistical code without understanding what the code is actually doing. The danger is not merely broken code. More importantly, code can run successfully, produce polished output, and still answer the wrong research question.</p>
+
+  <h2 class="section-title">Faculty Setup (required in advance)</h2>
+  <p>Like the Simulated Client Interview, this activity is not zero-prep. The instructor needs a dataset already matched to a research question with a known-correct analysis, and — per the Twist below — at least two prepared variants (one clean, one with a deliberately planted error) to have ground truth to grade against. Which variant a given student receives should vary by student or section, so students can't compare notes and immediately identify which condition they got.</p>
+  <p>Use a public or built-in dataset — never live, unpublished research or participant data, even de-identified — since the dataset itself gets pasted into an AI tool.</p>
+  <p style="color:var(--ink-faint); font-size:0.88rem;"><strong>Worked example:</strong> R's built-in <code>sleep</code> dataset (<code>data(sleep)</code>) — 10 subjects' increase in hours of sleep under two drugs, a paired/repeated-measures design. Research question given to students: "Does Drug 2 produce a larger increase in hours of sleep than Drug 1?" Clean variant: AI correctly runs a paired-samples t-test respecting the subject pairing. Planted-error variant: AI runs an independent-samples t-test instead, ignoring the pairing entirely — code runs fine and produces a plausible-looking p-value and effect size, but answers a subtly different question than the paired design actually supports. This is exactly the "runs successfully, looks polished, answers the wrong question" failure mode above — not a contrived bug, but one of the most common real mismatches in an intro stats course.</p>
+
+  <h2 class="section-title">The Prompt</h2>
+  <p>"Write code to analyze this dataset and answer [Research Question X]. Include assumption checks, the primary statistical test, an appropriate effect size, and a short interpretation of the results."</p>
+
+  <h2 class="section-title">Student Deliverable</h2>
+  <ul>
+    <li><strong>The Translation:</strong> for each consequential section of code, explain in ordinary language what statistical action it performs.</li>
+    <li><strong>The Design Check:</strong> determine whether the code actually matches:
+      <ul>
+        <li>the research question;</li>
+        <li>the variables and their measurement levels;</li>
+        <li>the study design;</li>
+        <li>the intended statistical test.</li>
+      </ul>
+    </li>
+    <li><strong>The Audit:</strong> identify anything that is:
+      <ul>
+        <li>incorrect;</li>
+        <li>unnecessary;</li>
+        <li>missing;</li>
+        <li>technically valid but inappropriate for this particular design.</li>
+      </ul>
+    </li>
+    <li><strong>The Output Check:</strong> determine whether the AI's written interpretation is actually supported by the statistical output.</li>
+    <li><strong>The Repair:</strong> correct the code or analysis plan and briefly explain why the change matters.</li>
+  </ul>
+  <p style="color:var(--ink-faint); font-size:0.88rem;">Twist: some versions can contain a deliberately planted error — but others should contain no error at all. Students therefore cannot assume that their job is to "find the mistake." They must decide whether a problem exists.</p>
+
+  <h2 class="section-title">Why It Works</h2>
+  <p>Statistical competence requires translating among several representations of the same problem: research question &rarr; design &rarr; variables &rarr; statistical model &rarr; code &rarr; output &rarr; substantive conclusion. AI can automate the middle of that chain while making the entire process appear seamless. Auditing the code forces students to reconstruct those links and determine whether they actually correspond.</p>
+  <p>It also separates two judgments that novices often collapse: "Did the code run?" and "Did the analysis make sense?" Those are not the same question.</p>
+
+  <h2 class="section-title">AI Literacy Lesson</h2>
+  <p>Executable output is not validated output. AI can automate statistical procedures, but the student remains responsible for whether the procedure matches the scientific question.</p>
+
+  <h2 class="section-title">Psychology Connection</h2>
+  <p>Statistical reasoning, measurement, methodological validity, metacognition, automation bias, and interpretation of evidence.</p>
+
+  <h2 class="section-title">Grading ROI</h2>
+  <p><strong>High.</strong> Faculty can grade a compact audit rather than a long coding exercise. The most diagnostic items are whether students can explain what the analysis actually tests, identify mismatches between design and code, and determine whether the conclusion follows from the output.</p>
+</div>
+
+<footer class="pagefoot">
+  <div class="snap">Snapshot as of 2026-08-01</div>
+  <p>Rewrite of the High-ROI Assignment Bank concept "The Code Commentator," by the pilot lead with ChatGPT, 2026-08-01. Original concept: Notion, "High ROI AI Assignments" page, retrieved 2026-07-31.</p>
+</footer>

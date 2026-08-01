@@ -1,0 +1,147 @@
+<title>Black Box → Glass Box: A Scaffolded AI Literacy Module — Psychology AI Integration Pilot</title>
+<link rel="stylesheet" href="shared.css">
+
+<div class="topbar">
+  <a class="mast" href="index.html">Psychology <span>×</span> AI Integration Pilot</a>
+  <nav class="toc" id="toc">
+    <a href="index.html">Overview</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="fall-2026.html">Fall 2026</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="activities.html" class="current">Activities</a>
+    <a href="bootcamp.html">Bootcamp</a>
+    <a href="competencies.html">Competencies</a>
+    <a href="resources.html">Resources</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<div class="page">
+  <p><a href="activities.html">&larr; Back to Activities</a></p>
+  <div class="page-head"><h1 class="page-title">Black Box &rarr; Glass Box: A Scaffolded AI Literacy Module</h1><span class="statuspill progress">drafted</span></div>
+  <p class="page-sub">A course-level module design, not a single activity — and not specific to this pilot or to psychology. Built to be picked up whole by any course or department building AI literacy from the ground up.</p>
+
+  <p>Students often experience AI as a black box: they type something, receive an answer, and try again when the result is strange. They see the output without understanding much about the instructions, context, and system choices shaping it.</p>
+  <p><strong>Black Box &rarr; Glass Box</strong> turns that confusion into the starting point for AI literacy. Students first use AI without much guidance and document behavior they cannot explain. Then, across seven stages, they progressively expose, analyze, write, test, and revise the instructions shaping AI behavior.</p>
+  <p>The goal is not to teach a collection of prompt tricks. The goal is for students to develop a <strong>working mental model of AI behavior</strong> — one good enough to predict, diagnose, and deliberately influence what happens when they use these systems.</p>
+
+  <div class="pullquote">"Glass box" is a teaching metaphor. Students are not inspecting the internal neural network. They are making the normally hidden <em>interaction layer</em> — instructions, context, constraints, model choice, and tool configuration — more visible and understandable.</div>
+
+  <h2 class="section-title">The Seven-Stage Progression</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Student Experience</th><th>Core Move</th></tr></thead>
+      <tbody>
+        <tr><td>1. Black Box Experience</td><td>Use AI with minimal guidance and encounter inconsistency, forgotten context, surprising answers, and mismatched output.</td><td>Experience before explanation.</td></tr>
+        <tr><td>2. Anomaly Collection</td><td>Document surprising behavior and propose explanations for why it happened.</td><td>Observe &rarr; hypothesize.</td></tr>
+        <tr><td>3. The Reveal</td><td>Run the same task under different instructions and compare the outputs.</td><td>Make hidden instructions visible.</td></tr>
+        <tr><td>4. Deconstruction</td><td>Annotate an existing prompt or instruction set: what is each section doing? What behavior is it trying to produce?</td><td>Read instructions as design.</td></tr>
+        <tr><td>5. Construction</td><td>Write instructions for a real disciplinary task.</td><td>Move from analysis to design.</td></tr>
+        <tr><td>6. Critique &amp; Revision</td><td>Exchange prompts, test them, identify failure modes, and revise.</td><td>Treat prompting as iterative hypothesis testing.</td></tr>
+        <tr><td>7. Glass Box Reflection</td><td>Return to an early task and explain the behavior that once seemed mysterious.</td><td>Demonstrate a changed mental model.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">Why Start With the Black Box?</h2>
+  <p>Most AI instruction begins by telling students how the technology works or giving them a list of prompting strategies. This module reverses that order. Students encounter the problem first:</p>
+  <ul>
+    <li>Why did the AI suddenly change tone?</li>
+    <li>Why did it ignore an instruction?</li>
+    <li>Why doesn't a new conversation remember the old one?</li>
+    <li>Why did the same question produce a different response somewhere else?</li>
+    <li>Why did a highly specific prompt work better — or sometimes make things worse?</li>
+  </ul>
+  <p>Those moments create something to explain. By the time the instruction layer is revealed, students already have observations and hypotheses against which the explanation can be tested. The progression is therefore:</p>
+  <p style="text-align:center; font-weight:700; color:var(--accent-strong);">Experience &rarr; Notice &rarr; Hypothesize &rarr; Reveal &rarr; Analyze &rarr; Build &rarr; Test &rarr; Reflect</p>
+
+  <h2 class="section-title">What Students Learn</h2>
+
+  <h3>AI behavior is conditional, not fixed</h3>
+  <p>An AI does not have one stable way of responding. Behavior emerges from the interaction among the underlying model, its training, system and developer instructions, conversation context, user instructions, available tools, and product configuration. Changing one part of that system can change the result.</p>
+
+  <h3>Prompts are instructions, not magic words</h3>
+  <p>Good prompting is less about discovering special phrases and more about specifying a task:</p>
+  <ul>
+    <li>What is the goal?</li>
+    <li>What information matters?</li>
+    <li>What constraints apply?</li>
+    <li>What should the output contain?</li>
+    <li>What should the system avoid?</li>
+    <li>How will success be judged?</li>
+  </ul>
+  <p>Prompt writing becomes a form of <strong>task design</strong>.</p>
+
+  <h3>Context is powerful — and bounded</h3>
+  <p>AI can use information supplied within its available context, but context is finite and persistence across sessions depends on the product and features being used. Students learn not to assume that an AI "knows" something simply because they told it before.</p>
+
+  <h3>The model and system matter</h3>
+  <p>The same user prompt can behave differently across models, products, or configurations. This means students should learn to ask not only "what prompt did I use?" but also "what system was I using?"</p>
+
+  <h3>Output can be shaped but not guaranteed</h3>
+  <p>Tone, length, structure, role, constraints, and output format can all be deliberately influenced. That does not make the resulting output correct. Control over presentation is different from control over truth.</p>
+
+  <h3>AI output is not a source of ground truth</h3>
+  <p>A response can be coherent, useful, and wrong. Learning to control AI behavior therefore has to develop alongside verification, source evaluation, and disciplinary judgment.</p>
+
+  <h2 class="section-title">What Success Looks Like</h2>
+  <p>By the end of the module, students should be able to:</p>
+  <ul>
+    <li>predict how changing an instruction is likely to change AI behavior;</li>
+    <li>identify likely causes when an AI response misses the intended goal;</li>
+    <li>distinguish the user prompt from other sources of context and instruction;</li>
+    <li>write a structured prompt for a real disciplinary task;</li>
+    <li>test whether that prompt actually produces the intended behavior;</li>
+    <li>revise instructions based on observed failure rather than blindly re-prompting;</li>
+    <li>explain why the same task may behave differently across sessions, models, or systems;</li>
+    <li>recognize that better control of AI output does not eliminate the need to verify it.</li>
+  </ul>
+  <p>The endpoint is not "I know how to prompt AI." It is: "I have a model of why this system behaved the way it did, and I know how to test whether my explanation is right."</p>
+
+  <h2 class="section-title">Flexible by Design</h2>
+  <p>The content can change while the learning sequence stays the same:</p>
+  <ul>
+    <li>A Psychology student might build a study tutor.</li>
+    <li>A Research Methods student might design an AI research critic.</li>
+    <li>A Statistics student might build an assistant that explains statistical output without interpreting beyond the evidence.</li>
+    <li>A Helping Skills student might configure a fictional client for interview practice.</li>
+    <li>A Biology student might build an assistant for comparing competing mechanistic explanations.</li>
+  </ul>
+  <p>What matters is not the disciplinary wrapper. What matters is the progression from using &rarr; observing &rarr; understanding &rarr; designing &rarr; testing.</p>
+
+  <h2 class="section-title">Three Ways to Use It</h2>
+
+  <h3>Compact Module — about two weeks</h3>
+  <p>Combine the seven stages into several larger experiences: Black Box + Anomalies &rarr; Reveal + Deconstruction &rarr; Build + Test &rarr; Reflection. Best when AI literacy is one component of an existing course.</p>
+
+  <h3>Full Module — approximately four to six weeks</h3>
+  <p>Give students time to investigate each stage, compare experiences, and iterate on their own designs. Best when AI literacy is a substantial course objective.</p>
+
+  <h3>Curriculum Ladder</h3>
+  <p>Teach the early stages in an introductory course and return to the same architecture later with less scaffolding. For example: early curriculum notices, explains, and deconstructs AI behavior; later curriculum designs, evaluates, and defends AI-assisted workflows within the discipline. Students encounter the same framework again, but the responsibility shifts progressively from the instructor to the student.</p>
+
+  <h2 class="section-title">Extensions</h2>
+
+  <h3>Same Prompt, Different System</h3>
+  <p>Run one carefully controlled prompt across several AI systems. Ask: what changed, and what stayed stable? The exercise makes the model and product configuration themselves into variables.</p>
+
+  <h3>Prompt Autopsy</h3>
+  <p>Give students a sophisticated prompt they did not write. Instead of running it immediately, have them predict what each section will do. Then test those predictions.</p>
+
+  <h3>Build It Badly</h3>
+  <p>Students deliberately construct a prompt containing ambiguous goals, conflicting instructions, missing context, or excessive constraints. A partner must diagnose why it fails.</p>
+
+  <h3>Prompt as Argument</h3>
+  <p>Treat the prompt as a rhetorical object. Who is the audience? What is the claim about what matters? What information has been foregrounded or excluded? What assumptions are embedded in the instructions? This moves prompt analysis beyond technical competence into critical literacy.</p>
+
+  <h2 class="section-title">The Larger Idea</h2>
+  <p>AI literacy should not stop at knowing that AI can hallucinate or learning how to write a better prompt. Students need to become <strong>investigators of AI-mediated cognition</strong>. They should notice behavior, formulate hypotheses about what caused it, manipulate the system, observe what changes, and revise their model.</p>
+  <p>Black Box &rarr; Glass Box uses the AI itself as the object of inquiry. The technology becomes more useful precisely because it becomes <strong>less mysterious</strong>.</p>
+
+  <p style="color:var(--ink-faint); font-size:0.88rem;">Related on this site: <a href="activities.html">Unit 2, "How AI Behaves,"</a> in the AI Literacy Unit Library runs a smaller-scale version of the same experience-first move (sycophancy, hallucination, context windows, model differences). The two aren't duplicates — Unit 2 is a single Literacy-tier unit sized for this pilot's Fall 2026 scope; this module is a full course-level architecture, including a design/build/test phase (Stages 4–6) that nothing else on this site currently covers. Worth treating as two different options for two different levels of commitment, not a redundancy to resolve.</p>
+</div>
+
+<footer class="pagefoot">
+  <div class="snap">Snapshot as of 2026-08-01</div>
+  <p>Originally developed by the pilot lead with Claude, then substantially rewritten by the pilot lead with ChatGPT. Source: the pilot lead's Notion, "Course Modules: Black Box &rarr; Glass Box — A Scaffolded AI Literacy Module."</p>
+</footer>
