@@ -1,0 +1,78 @@
+<title>Scaffolding BoodleBox Across a Course — Psychology AI Integration Pilot</title>
+<link rel="stylesheet" href="shared.css">
+
+<div class="topbar">
+  <a class="mast" href="index.html">Psychology <span>×</span> AI Integration Pilot</a>
+  <nav class="toc" id="toc">
+    <a href="index.html">Overview</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="fall-2026.html">Fall 2026</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="activities.html" class="current">Activities</a>
+    <a href="bootcamp.html">Bootcamp</a>
+    <a href="competencies.html">Competencies</a>
+    <a href="resources.html">Resources</a>
+    <a href="glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<div class="page">
+  <p><a href="activities.html">&larr; Back to Activities</a></p>
+  <div class="page-head"><h1 class="page-title">Scaffolding BoodleBox Across a Course</h1><span class="statuspill progress">drafted</span></div>
+  <p class="page-sub">What BoodleBox actually gives you as an instructor, five reusable bot patterns, and one way to sequence them across a semester.</p>
+
+  <h2 class="section-title">What BoodleBox gives you as an instructor</h2>
+  <ul>
+    <li><strong>Custom bot creation</strong> grounded in your own materials (syllabus, readings, rubrics) — not a generic chatbot, but one instructed and restricted to your course.</li>
+    <li><strong>Visibility into student AI interactions</strong> and usage data, marketed as making AI use more transparent and assessable than a personal chatbot account would be.</li>
+    <li><strong>Discipline templates</strong>, including social-science and research-methods patterns, as starting points rather than blank-slate bot design.</li>
+    <li><strong>Multi-model access</strong>, which supports side-by-side comparison activities — see "The Model Comparison" idea below.</li>
+  </ul>
+
+  <h2 class="section-title">Five bot patterns to build from</h2>
+  <p>Rather than inventing a bot from scratch, these are patterns other instructors have already used successfully, adaptable to psychology courses:</p>
+
+  <h3>1. Course Assistant</h3>
+  <p>Grounded in your syllabus; answers logistics questions and helps students contextualize dense readings — for example, a primary research article.</p>
+
+  <h3>2. Assignment Coach</h3>
+  <p>Walks students through a specific assignment's structure before they draft — for example, a research-methods write-up or a case-analysis paper — without writing it for them.</p>
+
+  <h3>3. Tutor Bot</h3>
+  <p>Trained on lecture notes and textbook chapters, available outside office hours, scaled to your course's level. This is close to what students learn to build for themselves in the student BoodleBox guide (linked below) — an instructor version would incorporate your rubric and grading standards, not just content.</p>
+
+  <h3>4. Feedback Bot</h3>
+  <p>Given a specific rubric, provides first-pass feedback on drafts before human grading. This works well as an early-to-mid-semester activity precisely because it requires students to specify criteria explicitly — which is itself the skill being taught.</p>
+
+  <h3>5. Conversation Simulator</h3>
+  <p>For applied courses (clinical, counseling-adjacent, I/O), simulates a structured interaction — an intake conversation, a performance-review conversation — for low-stakes practice. <strong>Never use real client or patient data or identifiable case material</strong> for this; build simulated personas instead.</p>
+
+  <h2 class="section-title">A tier-by-tier scaffolding plan</h2>
+  <p>If your program uses (or is building toward) a developmental sequence — something like Literacy &rarr; Fluency &rarr; Proficiency &rarr; Mastery — BoodleBox's feature set maps onto it reasonably well. Use this as a starting sequence, not a fixed curriculum.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Scaffolding idea</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Literacy</strong></td><td>Students use an instructor-provided Course Assistant bot before building their own — lowers the barrier to entry and lets you model good prompting and instruction-writing first. Pair with a model-comparison activity so students see capability differences firsthand.</td></tr>
+        <tr><td><strong>Fluency</strong></td><td>Students build their own study bot and are required to document what they attached, what instructions they gave it, and one place it was wrong or overconfident. Introduce a Feedback Bot on one low-stakes draft, with the explicit lesson that the rubric they hand it determines the quality of feedback they get back.</td></tr>
+        <tr><td><strong>Proficiency</strong></td><td>Students critique or extend an instructor-built discipline-specific bot — for example, a research-methods case-study bot — auditing its outputs against disciplinary standards rather than just using it.</td></tr>
+        <tr><td><strong>Mastery</strong></td><td>Students design and document their own bot for a professional or portfolio use case (for example, a Conversation Simulator built on simulated, not real, case data) and defend their design choices — why this instruction set, why these guardrails, what they deliberately kept human-only.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">Before you scaffold anything</h2>
+  <ul>
+    <li><strong>Confirm access.</strong> Don't assume every student in your section has an activated account — check with your campus AI/IT contact before building an activity that depends on it.</li>
+    <li><strong>Real sensitive data never goes into a bot</strong>, instructor-built or student-built, regardless of platform privacy claims.</li>
+    <li><strong>Verify platform claims before citing them to students.</strong> Data-privacy and certification claims are the vendor's own language — reasonable to rely on provisionally, but confirm current status directly if a course involves anything remotely sensitive.</li>
+  </ul>
+
+  <p style="color:var(--ink-faint); font-size:0.88rem;">This guide describes BoodleBox's general features as of mid-2026; exact capabilities and menu names may shift as the platform updates. The companion student-facing guides — "About the Pilot" and "Getting Started with BoodleBox" — are published separately at <a href="https://jkoxford-a11y.github.io/boodlebox-guide/">jkoxford-a11y.github.io/boodlebox-guide</a>, kept apart from this site so students are never given a path to this site's full assessment-item text.</p>
+</div>
+
+<footer class="pagefoot">
+  <div class="snap">Snapshot as of 2026-08-02</div>
+  <p>Source: <code>library/BOODLEBOX_FACULTY_SCAFFOLDING.md</code> in the working repo, ported here from the standalone <code>boodlebox-guide</code> site so faculty-facing BoodleBox content lives alongside the rest of this site's faculty resources.</p>
+</footer>
