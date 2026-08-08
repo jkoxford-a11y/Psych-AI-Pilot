@@ -29,10 +29,11 @@
   <ul>
     <li><strong>The setup</strong> — what students do</li>
     <li><strong>Why it works</strong> — the pedagogical rationale, including disciplinary connections where relevant</li>
-    <li><strong>Now Try This</strong> — the prompt phrases or practices students earn through the activity</li>
+    <li><strong>Now Try This</strong> — the practice students earn through the activity, and the AI phrase that supports it</li>
     <li><strong>Debrief question</strong> — to anchor the learning in discussion</li>
   </ul>
   <p>This unit works best as the first in the sequence. Units 2 onward assume students have the mental model established here.</p>
+  <p>This is a menu, not six mandatory activities. If you're short on time, the recommended core spine is: <strong>The Next Word Game → Where Did This Answer Come From? → The Fluency Illusion → The Risk/Verification Map → Revise Your Mental Model.</strong> Activity 4 (Confident and Wrong) and Activity 6 (The Human-AI Comparison) are strong optional extensions if you have room for them, not required links in the chain.</p>
 
   <div class="pullquote"><strong>Disciplinary connections for psychology instructors:</strong> This unit builds on students' existing knowledge of neurons and synaptic transmission from General Psychology — the idea of weighted connections strengthened by exposure is the right intuition and most students already have it. The connectionist architecture introduced here is treated formally in Cognitive Psychology (PDP models, pattern completion, predictive processing) and Biological Psychology (Hebbian learning, long-term potentiation). You can frame this unit as a preview: "You'll see this family of ideas again, in more depth, in Cog and Biopsych. For now, we're building just enough of the model to understand why AI behaves the way it does."</div>
 
@@ -42,48 +43,59 @@
   <details class="disclosure">
     <summary>Activity 1: The Next Word Game</summary>
     <p><strong>What students do</strong></p>
-    <p>The instructor reads a series of sentence fragments aloud. Students write down the first word that comes to mind to complete each one. Examples:</p>
+    <p><strong>Round 1.</strong> The instructor reads a series of sentence fragments aloud. Students write down the first word that comes to mind to complete each one. Examples:</p>
     <ul>
       <li>"The doctor told the patient to take two..."</li>
       <li>"She opened the door and saw a..."</li>
       <li>"The experiment failed because the researchers forgot to..."</li>
       <li>"After years of practice, he finally..."</li>
     </ul>
-    <p>Students share their completions. The class notes: how much agreement is there? Where does it break down? Then the instructor reveals that this is <em>exactly</em> the core task an AI language model is trained to do — predict the most likely next token given everything that came before — just at massive scale, across billions of examples, with hundreds of billions of weighted parameters.</p>
+    <p>Students share their completions. The class notes: how much agreement is there? Where does it break down?</p>
+    <p><strong>Round 2.</strong> The instructor reads two fragments that share the same ambiguous word but different setup context:</p>
+    <ul>
+      <li>"The fisherman sat on the bank and..."</li>
+      <li>"The customer walked into the bank and..."</li>
+    </ul>
+    <p>Students again write the first completion that comes to mind. This time the class compares completions <em>across</em> the two fragments rather than within one: "bank" pulled toward completely different completions depending on the two or three words that came before it.</p>
+    <p>Then the instructor reveals the analogy: this is a simplified stand-in for the core task an AI language model is trained to do — predict the most likely next piece of text given everything that came before — at massive scale, across billions of examples, with hundreds of billions of weighted parameters. It's an analogy, not a literal description of what a student's brain is doing, but the pattern holds in both directions: Round 1 shows that training creates strong, shared statistical structure (why completions converge on "pills," "stranger," "control"); Round 2 shows that the surrounding context changes which part of that structure becomes relevant (why "bank" resolves differently depending on "fisherman" versus "customer").</p>
+    <p>A short model sketch, useful to put on the board after the reveal:</p>
+    <ul>
+      <li>Training → learned statistical structure.</li>
+      <li>Prompt/context + model → generated prediction.</li>
+      <li>Tools, files, or search can add information before the prediction is made.</li>
+    </ul>
     <p>The instructor then asks: if that's the mechanism, what does it mean when AI sounds confident? What does it mean when it's wrong?</p>
     <p><strong>Why it works</strong></p>
-    <p>This activity grounds the abstract in something students just did with their own cognition. The completions tend to converge strongly on high-frequency continuations ("pills," "stranger," "control") and diverge on lower-frequency ones — which maps directly onto how language models behave. High-frequency patterns produce confident, consistent output. Lower-frequency or more specific queries produce more variable, less reliable output.</p>
-    <p>For psychology students specifically: this connects naturally to spreading activation models of memory and prototype effects in categorization — both of which involve pattern completion over weighted associations. You don't need to make this connection explicit in COLL133, but it's available for instructors teaching this in a Cognitive Psychology context.</p>
+    <p>This activity grounds the abstract in something students just did with their own cognition. Round 1 completions tend to converge strongly on high-frequency continuations and diverge on lower-frequency ones — which maps directly onto how language models behave: high-frequency patterns produce confident, consistent output, while lower-frequency or more specific queries produce more variable, less reliable output. Round 2 makes the second half of the model concrete without any technical vocabulary: the same word pulled toward different completions once a few words of context changed what was relevant.</p>
+    <p>For psychology students specifically: this connects naturally to spreading activation models of memory, prototype effects in categorization, and context-dependent retrieval — all of which involve pattern completion over weighted associations shaped by cues. You don't need to make this connection explicit in COLL133, but it's available for instructors teaching this in a Cognitive Psychology context.</p>
     <p><strong>Debrief question</strong></p>
-    <p>You just did next-word prediction using your own memory and experience. Where did you agree with your classmates? Where did you diverge? What does that tell you about what AI is likely to get right versus wrong?</p>
-    <p><strong>Now Try This — phrases earned through this activity</strong></p>
+    <p>You just did next-word prediction twice — once where everyone converged, once where a few words of context changed everything. What does that tell you about what AI is likely to get right versus wrong, and about how much your own phrasing shapes the answer you get?</p>
+    <p><strong>Now Try This — Practices Earned</strong></p>
     <ul>
-      <li>"This is a high-stakes or specific claim. What's your confidence level, and what would I need to verify independently?"</li>
-      <li>"Give me the less obvious completion — not the most predictable answer, but a well-reasoned alternative."</li>
+      <li><strong>Practice Earned:</strong> Treat a confident-sounding answer as a signal of how common that pattern is, not a signal that it's true.<br><em>Ask AI:</em> "Give me the less obvious completion — not the most predictable answer, but a well-reasoned alternative."</li>
+      <li><strong>Practice Earned:</strong> Notice when your own phrasing is steering the answer, and use that deliberately.<br><em>Ask AI:</em> "If I phrased that differently, would your answer change? Try it with [alternate phrasing]."</li>
     </ul>
   </details>
 
   <details class="disclosure">
-    <summary>Activity 2: Where Did It Learn That?</summary>
+    <summary>Activity 2: Where Did This Answer Come From?</summary>
     <p><strong>What students do</strong></p>
-    <p>Students are given four prompts to try in any AI tool:</p>
+    <p>The instructor prepares a short document containing a trivial fact students couldn't already know and a generic AI tool almost certainly doesn't either (an invented statistic about the class, a made-up local detail, an obscure line from a short handout).</p>
     <ol>
-      <li>Ask about a well-documented historical event</li>
-      <li>Ask about something very recent (within the past few months)</li>
-      <li>Ask about something highly specific to their local context (their town, their campus, a local business)</li>
-      <li>Ask about themselves</li>
+      <li>Students ask AI about that fact <em>before</em> attaching or sharing the document. They document the answer and how confidently it was stated.</li>
+      <li>Students then attach the document (or paste its contents) and ask the same question again. They document what changed.</li>
+      <li>Separately, students ask about something genuinely recent — within the last few months — once with a tool/search capability turned off or unavailable, and once with it turned on. They document what changed there too.</li>
     </ol>
-    <p>For each, they document: How confident did AI sound? How accurate was it? Did it acknowledge any limitations?</p>
-    <p>Then the class builds a shared map: what kinds of things does AI know well, and why? What kinds of things does it not know, and why?</p>
-    <p>The instructor introduces the concept of training data and knowledge cutoffs — not as a technical deep-dive, but as the answer to the question students just generated: the model knows what was in its training data, and nothing else.</p>
+    <p>For each pair, the key question isn't "did the answer get better?" — it's <strong>what changed about the system, not the model.</strong> Nothing about the underlying trained model changed between the "before" and "after" asks. What changed is what information it had access to when it generated the response.</p>
+    <p>The class builds a shared map from these examples: what kinds of things can this AI system answer reliably, and from where — training, the current conversation, an attached file, memory, or a search/tool call? The instructor introduces the combined model: <strong>trained model + current context + tools/retrieved information → generated response.</strong> The language model itself still matters enormously, but "what did it know" is the wrong question on its own — the right question is "what information did this system actually have access to when it produced this answer?"</p>
     <p><strong>Why it works</strong></p>
-    <p>Students frequently anthropomorphize AI — treating it as if it has access to the world the way a person does. This activity makes the boundary between training data and real-time knowledge concrete and personal. The "ask about yourself" prompt is particularly effective: AI either knows nothing, confabulates, or (for public figures) produces information that may be outdated or wrong. The gap between how the model sounds and what it actually has access to is the lesson.</p>
+    <p>Students frequently anthropomorphize AI — treating it as a single fixed entity that either "knows" things or doesn't. This activity makes the boundary concrete and personal by showing the <em>same underlying model</em> answer differently depending on what it was given, which breaks the habit of treating AI confidence as a report of what the model "has." It also matches how students will actually use these tools in this pilot, which combine models with attached files, persistent context, and search — not an isolated chatbot with a hard knowledge wall.</p>
     <p><strong>Debrief question</strong></p>
-    <p>AI sounded equally confident across all four prompts. What does that tell you about using confidence as a signal of accuracy?</p>
-    <p><strong>Now Try This — phrases earned through this activity</strong></p>
+    <p>AI sounded confident before it had the document or the current information, and confident after. What does that tell you about using confidence as a signal that a system actually has what it needs to answer you?</p>
+    <p><strong>Now Try This — Practices Earned</strong></p>
     <ul>
-      <li>"Is this something that could have changed since your training data? If so, tell me what to search for to verify it."</li>
-      <li>"What would you need access to that you don't currently have in order to answer this reliably?"</li>
+      <li><strong>Practice Earned:</strong> Before trusting an answer, identify what information source it could plausibly be drawing from.<br><em>Ask AI:</em> "Is this something you'd know from training, or would you need current, attached, or searchable information to answer it reliably?"</li>
+      <li><strong>Practice Earned:</strong> When an answer might be stale or unsupported, get a path to check it rather than accepting it as-is.<br><em>Ask AI:</em> "If this could have changed, tell me what to search for to verify it."</li>
     </ul>
   </details>
 
@@ -94,35 +106,45 @@
     <summary>Activity 3: The Fluency Illusion</summary>
     <p><strong>What students do</strong></p>
     <p>Students are given four short paragraphs — printed, not on screen — and asked to rate each one on two dimensions: (1) How well-written does this seem? (1–7 scale) (2) How accurate does this seem? (1–7 scale)</p>
-    <p>Two of the paragraphs are factually accurate. Two contain subtle but significant errors. All four are written in polished, confident prose. Students rate individually, then share.</p>
-    <p>After sharing, the instructor reveals which paragraphs contained errors. The class examines: did writing quality predict accuracy? Did students' confidence ratings track actual accuracy?</p>
-    <p><em>Instructor note: Generate the paragraphs fresh using an AI tool before class — ask it to write two accurate and two subtly wrong paragraphs on a topic relevant to your course. This keeps the content current and avoids the paragraphs circulating online.</em></p>
+    <p>The four paragraphs cross two variables instead of varying only one: one is accurate and fluently written, one is accurate but written in flatter, more awkward prose, one is inaccurate but fluently written, and one is inaccurate and written in flatter, more awkward prose. Students don't know which is which. They rate individually, then share.</p>
+    <p><em>Instructor note: Generate all four fresh using an AI tool before class — ask it explicitly for two accuracy conditions (accurate / subtly wrong) crossed with two fluency conditions (polished and confident / plain and a little awkward, but not sloppy or obviously off) on a topic relevant to your course. This keeps the content current, avoids paragraphs circulating online, and — unlike asking for "two accurate and two wrong" alone — actually varies fluency, which is the variable the activity is named for.</em></p>
+    <p>After sharing, the instructor reveals which paragraphs were accurate and which were fluent. The class examines: did writing quality predict accuracy? Specifically — was the less-fluent, accurate paragraph rated as more trustworthy than the fluent, inaccurate one? That comparison is the actual test of whether fluency itself moved judgment, not just whether judgment was imperfect.</p>
     <p><strong>Why it works</strong></p>
-    <p>This is a direct demonstration of the fluency heuristic — the well-documented tendency to judge fluently presented information as more true. Psychology students will recognize this from their coursework; this activity shows it operating on AI output specifically. The finding that writing quality and accuracy are decoupled in AI output is the conceptual anchor for every verification activity that follows in Unit 3.</p>
+    <p>This is a direct demonstration of the fluency heuristic — the well-documented tendency to judge fluently presented information as more true. Psychology students will recognize this from their coursework; crossing fluency and accuracy independently is what lets the activity actually demonstrate the heuristic rather than just show that AI output can be wrong. The finding that writing quality and accuracy are decoupled in AI output is the conceptual anchor for every verification activity that follows in Unit 3.</p>
     <p>For instructors teaching this in a Social Psychology or Cognitive Psychology context: this connects directly to processing fluency research (Reber, Schwarz, &amp; Winkielman, 2004) and the illusory truth effect. You can make that connection explicit or leave it implicit depending on course level.</p>
     <p><strong>Debrief question</strong></p>
-    <p>You just experienced the fluency heuristic on AI output. Knowing this, what habit would help you catch the well-written wrong answer?</p>
-    <p><strong>Now Try This — phrases earned through this activity</strong></p>
+    <p>You just experienced the fluency heuristic on AI output. Did the less-fluent accurate paragraph get rated as less trustworthy than the fluent inaccurate one? What habit would help you catch a well-written wrong answer?</p>
+    <p><strong>Now Try This — Practices Earned</strong></p>
     <ul>
-      <li>"You've given me a fluent answer. Now tell me specifically what you're least certain about in it."</li>
-      <li>"What's the strongest argument that this answer is wrong?"</li>
+      <li><strong>Practice Earned:</strong> Separate your judgment of how something is written from your judgment of whether it's true.<br><em>Ask AI:</em> "Set aside how this reads — what's the strongest argument that it's wrong?"</li>
+      <li><strong>Practice Earned:</strong> When you're persuaded quickly, treat that as a prompt to check, not a stopping point.<br><em>Ask AI:</em> "You've given me a fluent answer. Now tell me specifically what you're least certain about in it."</li>
     </ul>
   </details>
 
   <details class="disclosure">
-    <summary>Activity 4: Confident and Wrong — A Taxonomy</summary>
+    <summary>Activity 4: Confident and Wrong <span style="font-weight:400; color:var(--ink-faint);">(optional extension)</span></summary>
+    <p><em>This activity is a light first pass at diagnosing AI errors, not the full treatment — Unit 2 ("How AI Behaves") goes much deeper on hallucination specifically, with the Expert Trap, the Citation Hunt, and the Confidence Interrogation. Use this one if you have room in Unit 1; don't feel obligated to cover both.</em></p>
     <p><strong>What students do</strong></p>
     <p>Working in pairs, students attempt to get AI to produce confident-sounding wrong answers across four categories: (1) A fabricated citation — ask for sources on a real topic. (2) A false historical detail — ask about a real event with a specific numerical claim (dates, statistics, counts). (3) A plausible-but-wrong causal claim — ask why something happens in a domain neither student knows well. (4) An outdated fact — ask about something that was true before the training cutoff but may have changed.</p>
     <p>Pairs document their best example from each category: the prompt, the AI output, and how they verified the error.</p>
-    <p>Class shares findings. Instructor maps the categories onto a simple framework: <em>fabrication</em> (pattern completion with no factual anchor), <em>compression error</em> (real information stored imprecisely), <em>cutoff error</em> (accurate at training time, no longer true).</p>
+    <p>Class shares findings. Instructor maps the examples onto an observable taxonomy — categories a student can apply by looking at the output, not a claim about what happened inside the model:</p>
+    <ul>
+      <li><strong>Unsupported/fabricated</strong> — the claim or source can't be substantiated at all.</li>
+      <li><strong>Precision error</strong> — the broad idea is right, but specifics (dates, numbers, names, quotations) are wrong.</li>
+      <li><strong>Staleness error</strong> — it was true once and may no longer be.</li>
+      <li><strong>Reasoning error</strong> — the premises are fine, the inference isn't.</li>
+      <li><strong>Source/context error</strong> — it misrepresents a source it was given or ignores a stated constraint.</li>
+      <li><strong>Tool/retrieval error</strong> — the right information existed and was reachable, but the system pulled or used the wrong evidence.</li>
+    </ul>
+    <p>Frame this explicitly to students as diagnosing the failure you can observe, not the internal cause — we don't actually know, from the output alone, why a given answer went wrong.</p>
     <p><strong>Why it works</strong></p>
-    <p>Naming the failure modes gives students a taxonomy they can apply going forward. "That sounds like a fabrication" and "that might be a cutoff error" are more useful than the generic "AI makes mistakes." The activity also gives students genuine agency — they're actively probing the system rather than passively receiving warnings about it.</p>
+    <p>Naming the failure modes gives students a taxonomy they can apply going forward. "That sounds like a precision error" and "that might be a staleness error" are more useful than the generic "AI makes mistakes." The activity also gives students genuine agency — they're actively probing the system rather than passively receiving warnings about it.</p>
     <p><strong>Debrief question</strong></p>
     <p>Which category of error was easiest to get AI to produce? Which was hardest to catch? What does that asymmetry tell you about where to focus your verification effort?</p>
-    <p><strong>Now Try This — phrases earned through this activity</strong></p>
+    <p><strong>Now Try This — Practices Earned</strong></p>
     <ul>
-      <li>"Is this claim something that could be a compression error — approximately right but imprecise on the specifics?"</li>
-      <li>"Flag anything in your answer that falls into one of these categories: fabricated, imprecisely remembered, or potentially outdated."</li>
+      <li><strong>Practice Earned:</strong> Name what kind of error you're looking at before deciding how to check it, and treat the name as a starting hypothesis, not a verdict.<br><em>Ask AI:</em> "Which of these seems closest — unsupported, imprecise, outdated, a reasoning gap, a misread source, or a retrieval miss?"</li>
+      <li><strong>Practice Earned:</strong> Spend your verification effort where errors are easiest to produce and hardest to catch, not evenly across everything.<br><em>Ask AI:</em> "Which of these categories took you the least effort to produce just now? That's where your own verification habit needs to be strongest."</li>
     </ul>
   </details>
 
@@ -130,36 +152,43 @@
   <p style="color:var(--ink-faint); font-style:italic; margin-top:-8px;">Students need a calibrated map of AI capability — not "AI is amazing" or "AI can't be trusted" but a usable sense of where it adds genuine value and where it doesn't.</p>
 
   <details class="disclosure">
-    <summary>Activity 5: The Capability Map</summary>
+    <summary>Activity 5: The Risk/Verification Map</summary>
     <p><strong>What students do</strong></p>
-    <p>Students are given a list of 20 tasks and asked to sort them into three categories: <strong>AI does this well</strong> (reliable enough to use with light verification), <strong>AI does this partially</strong> (useful starting point but requires significant checking or editing), <strong>AI does this poorly</strong> (not worth using AI for, or actively risky).</p>
-    <p>Example tasks (instructor should adapt to course context): summarize a long article I paste in; find me the most recent study on this topic; explain a concept I already understand to check my understanding; give me feedback on whether my argument is logically sound; tell me the current price of a stock; generate practice exam questions on a topic; cite sources for a claim; help me brainstorm counterarguments; translate a passage from Spanish; tell me whether a specific medication is safe for a specific patient; write a first draft of a routine email; identify the author's emotional tone in a passage I paste; tell me what happened in the news today; help me debug why my argument isn't persuasive; give me accurate statistics about a social issue.</p>
-    <p>Students sort individually, then compare in groups. Groups rarely agree perfectly — and that disagreement is the content of the debrief.</p>
-    <p><strong>Why it works</strong></p>
-    <p>The goal is not to produce the "correct" capability map — it's to surface the reasoning students are using. Some students sort based on experience ("I've seen it fail at this"), some based on the mental model from earlier activities ("this requires real-time data, so..."), some based on intuition. Making those different reasoning strategies visible helps students calibrate future judgments. The capability map also becomes a practical reference: students can return to it and revise it as their AI experience grows.</p>
-    <p><strong>Debrief question</strong></p>
-    <p>Where did your group disagree most? Was the disagreement about AI's capability, or about how much verification effort is worth it for that task?</p>
-    <p><strong>Now Try This — phrases earned through this activity</strong></p>
+    <p>Students are given a list of 20 tasks. Instead of sorting each into a fixed "AI is good/bad at this" bin, they rate each task on five properties:</p>
     <ul>
-      <li>Before starting any AI-assisted task: "Is this a task where AI is likely to be reliable, partially reliable, or unreliable? What does that mean for how I use the output?"</li>
-      <li>"What category of task is this, and what's the appropriate level of trust for that category?"</li>
+      <li><strong>Cost of error</strong> — how bad is it if a wrong answer goes unnoticed?</li>
+      <li><strong>Ease of verification</strong> — how easily can I check this myself?</li>
+      <li><strong>Need for current or private information</strong> — does this depend on something that changes, or that isn't public?</li>
+      <li><strong>Grounding available</strong> — is there a source, document, or tool I can point the system at?</li>
+      <li><strong>Degree of human judgment required</strong> — how much does this task depend on judgment that's supposed to be mine, not delegated?</li>
+    </ul>
+    <p>Example tasks (instructor should adapt to course context): summarize a long article I paste in; find me the most recent study on this topic; explain a concept I already understand to check my understanding; give me feedback on whether my argument is logically sound; tell me the current price of a stock; generate practice exam questions on a topic; cite sources for a claim; help me brainstorm counterarguments; translate a passage from Spanish; tell me whether a specific medication is safe for a specific patient; write a first draft of a routine email; identify the author's emotional tone in a passage I paste; tell me what happened in the news today; help me debug why my argument isn't persuasive; give me accurate statistics about a social issue.</p>
+    <p>Students rate individually, then compare in groups. Groups rarely agree perfectly — and that disagreement is the content of the debrief.</p>
+    <p><strong>Why it works</strong></p>
+    <p>A static "AI does this well/poorly" list goes stale the moment models or tools change. Rating tasks by error cost and verification difficulty instead teaches something durable: the goal isn't to memorize what current AI can do, it's to build a habit of asking the right questions before starting a task. The disagreement in groups usually traces back to different reasoning strategies — some students reason from experience, some from the mental model built in earlier activities, some from intuition — and making those visible is itself the point. The map is also a practical reference students can revisit and re-rate as their experience grows, without the map itself needing to be rewritten.</p>
+    <p><strong>Debrief question</strong></p>
+    <p>Where did your group disagree most? Was the disagreement about how capable AI actually is, or about how costly an error would be and how easy it is to verify?</p>
+    <p><strong>Now Try This — Practices Earned</strong></p>
+    <ul>
+      <li><strong>Practice Earned:</strong> Before starting an AI-assisted task, size up the error cost and verification difficulty yourself — that judgment is yours to make, not the AI's.<br><em>Ask AI:</em> "Help me think through what could go wrong here and how I'd catch it" — used as a source of raw material for your own judgment, not as the judgment itself.</li>
     </ul>
   </details>
 
   <details class="disclosure">
-    <summary>Activity 6: The Human-AI Comparison</summary>
+    <summary>Activity 6: The Human-AI Comparison <span style="font-weight:400; color:var(--ink-faint);">(optional extension)</span></summary>
     <p><strong>What students do</strong></p>
     <p>Students complete the same task two ways — first without AI, then with AI assistance — and compare the results.</p>
     <p>The task should be one where both approaches are plausible and neither is obviously superior. Good options: write a one-paragraph explanation of a concept covered in class this week; generate five exam practice questions on a topic you just studied; identify the three strongest objections to an argument you've been given.</p>
-    <p>Students document: Where did AI add value? Where did your own version hold up better? What did you know that AI didn't? What did AI do that you couldn't or wouldn't have done as quickly?</p>
+    <p>Students document the comparison across several dimensions, not just "which was better": accuracy, breadth, originality, time spent, cognitive effort, and — importantly — how well they could explain or defend each version if asked. What did AI add? What did your own version hold up better on? What did you know that AI didn't?</p>
+    <p><em>Note: doing the solo version first and the AI version second (always in that order) is fine pedagogically, but it isn't a controlled experiment — practice and order effects mean the second attempt has an inherent advantage regardless of which tool produced it. Treat the comparison as a reflection exercise, not a demonstration that one approach is generally better.</em></p>
     <p><strong>Why it works</strong></p>
     <p>This reframes the question from "is AI good or bad" to "what is the right division of labor here?" Students who discover that their own explanation was more accurate, or that AI's practice questions were too easy, or that AI missed the most important objection — those students leave with a calibrated rather than credulous relationship with the tool. Students who discover AI genuinely helped them think faster or more broadly also leave with something real: they've identified a use case that works for them.</p>
     <p><strong>Debrief question</strong></p>
     <p>Based on this comparison, what's one thing you should probably keep doing yourself, and one thing where AI assistance is genuinely worth it?</p>
-    <p><strong>Now Try This — phrases earned through this activity</strong></p>
+    <p><strong>Now Try This — Practices Earned</strong></p>
     <ul>
-      <li>"I've drafted my own version of this. Here it is. Where does your version add something mine doesn't, and where does mine hold up better?"</li>
-      <li>"What can you do here that I probably can't do as quickly myself? What should I still do myself?"</li>
+      <li><strong>Practice Earned:</strong> Put your own attempt on the table before asking AI to improve on it, so you have an independent baseline to compare against.<br><em>Ask AI:</em> "I've drafted my own version of this. Here it is. Where does your version add something mine doesn't, and where does mine hold up better?"</li>
+      <li><strong>Practice Earned:</strong> Decide what stays yours to do based on speed, judgment, and defensibility — not just on what AI can technically produce.<br><em>Ask AI:</em> "What can you do here that I probably can't do as quickly myself? What should I still do myself?"</li>
     </ul>
   </details>
 
@@ -178,14 +207,14 @@
   <h2 class="section-title">Assessment Note</h2>
   <p>The competency being built in this unit is a working mental model, not factual recall. Avoid asking students to recite definitions of tokens, parameters, or training data. Instead, assess whether students can <em>apply</em> the model:</p>
   <ul>
-    <li>Given a new AI failure, can they identify which category it belongs to (fabrication, compression error, cutoff error)?</li>
-    <li>Given a new task, can they make a reasonable prediction about where AI will be reliable versus unreliable?</li>
+    <li>Given a new AI failure, can they identify which category it belongs to (unsupported/fabricated, precision error, staleness error, reasoning error, source/context error, tool/retrieval error)?</li>
+    <li>Given a new task, can they make a reasonable prediction about where AI will be reliable versus unreliable, based on error cost and verification difficulty rather than a memorized capability list?</li>
     <li>Has their stated mental model changed from the beginning to the end of the unit in ways that reflect the activities?</li>
   </ul>
-  <p>The revised mental model from the culminating activity is the most direct assessment artifact. A student who ends the unit still describing AI as "basically intelligent" or "just autocomplete" has not yet developed the working model this curriculum requires.</p>
+  <p>The revised mental model from the culminating activity is the most direct assessment artifact. A student who ends the unit still describing AI as "basically intelligent" or "just autocomplete" has not yet developed the working model this curriculum requires — nor has a student whose revision still describes the system as bounded only by its training data. An adequate revised model names all three parts: the trained model, the current context, and whatever tools or retrieved information the system had available.</p>
 </div>
 
 <footer class="pagefoot">
-  <div class="snap">Snapshot as of 2026-08-01</div>
-  <p>Source: Scaffolding AI Literacy series, "Imagination is the Key" (Notion).</p>
+  <div class="snap">Snapshot as of 2026-08-08</div>
+  <p>Revised by the pilot lead with Claude, 2026-08-08, following an external GPT audit of the prior version. Original: Scaffolding AI Literacy series, "Imagination is the Key" (Notion), retrieved 2026-08-01 — Notion has not been updated to match this revision.</p>
 </footer>
