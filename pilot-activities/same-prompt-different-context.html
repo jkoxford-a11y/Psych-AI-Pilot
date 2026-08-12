@@ -1,0 +1,66 @@
+<title>Same Prompt, Different Context — Psychology AI Integration Pilot</title>
+<link rel="stylesheet" href="../shared.css">
+
+<div class="topbar">
+  <a class="mast" href="../index.html">Psychology <span>×</span> AI Integration Pilot</a>
+  <nav class="toc" id="toc">
+    <a href="../index.html">Overview</a>
+    <a href="../roadmap.html">Roadmap</a>
+    <a href="../fall-2026.html">Fall 2026</a>
+    <a href="../assessment.html">Assessment</a>
+    <a href="../activities.html" class="current">Activities</a>
+    <a href="../bootcamp.html">Bootcamp</a>
+    <a href="../competencies.html">Competencies</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../glossary.html">Glossary</a>
+  </nav>
+</div>
+
+<div class="page">
+  <p><a href="../activities.html">&larr; Back to Activities</a></p>
+  <div class="page-head"><h1 class="page-title">Same Prompt, Different Context</h1><span class="statuspill progress">drafted</span></div>
+  <p class="page-sub">Curated for this pilot &middot; Extends Unit 1, Activity 2 &middot; BoodleBox and/or Gemini Notebook (NotebookLM)</p>
+
+  <div class="pullquote">Status: drafted, not yet vetted through classroom use. Adapted 2026-08-12 by the pilot lead (with Claude) from Unit 1 Activity 2 (&ldquo;Where Did This Answer Come From?&rdquo;) and the &ldquo;Build a Study Bot&rdquo; use cases, illustrated with the pilot lead&rsquo;s own live demonstration &mdash; asking NotebookLM &ldquo;Teach me about action potentials&rdquo; before and after uploading the course chapter. Grading policy and which platform track(s) to run are both left to instructor discretion &mdash; see the working repo&rsquo;s decision log, 2026-08-12.</div>
+
+  <h2 class="section-title">The Concept</h2>
+  <p>Students ask an AI tool the same question twice: once with no course material attached, once with the relevant chapter or notes attached. Nothing about the underlying model changes between the two asks &mdash; only what information it had access to. The gap between the two answers is the lesson: a confident-sounding AI answer is not evidence that the system actually has what it needs to answer well.</p>
+
+  <div class="tablewrap">
+    <table>
+      <tr><th>Psychology objective</th><td>Context-dependent retrieval and spreading-activation models of memory, applied to how grounding changes an AI answer.</td></tr>
+      <tr><th>AI competency</th><td>Mental model of AI &mdash; trained model + current context + tools/retrieved information &rarr; response &mdash; and information-provenance judgment.</td></tr>
+      <tr><th>Tier</th><td>Literacy</td></tr>
+      <tr><th>Time</th><td>Both platforms: ~45&ndash;55 min. One platform (a study bot already built): ~20&ndash;25 min.</td></tr>
+      <tr><th>Human-only component</th><td>A one-sentence prediction before the grounded round, and the written comparison analysis afterward &mdash; not delegated to the AI.</td></tr>
+      <tr><th>Verification requirement</th><td>Check one claim from a grounded answer against the actual course material, not against the AI again.</td></tr>
+    </table>
+  </div>
+
+  <h2 class="section-title">Step 0: Pick Your Question</h2>
+  <p>Choose something covered in class this week with real depth &mdash; not a yes/no fact. The pilot lead&rsquo;s own example: <em>&ldquo;Teach me about action potentials.&rdquo;</em> Write the question down before starting, and don&rsquo;t change it between rounds.</p>
+
+  <h2 class="section-title">Track A: BoodleBox (Custom Bot)</h2>
+  <p><strong>Round 1 &mdash; cold.</strong> Start a new BoodleBox chat (<code>Ctrl+B</code>). Don&rsquo;t attach anything. Ask the question. Save the answer.</p>
+  <p><strong>Round 2 &mdash; grounded.</strong> Build a real study bot: upload the relevant chapter or notes to the Knowledge Bank (&#129504;), attach it to the chat (&#128206;), optionally switch to Bot Mode and turn on Knowledge to Context Mode. Ask the exact same question again. Save this answer too.</p>
+
+  <h2 class="section-title">Track B: Gemini Notebook (NotebookLM)</h2>
+  <p><strong>Round 1 &mdash; cold.</strong> At notebooklm.google.com, before adding any sources, ask the question in the chat. Save the answer.</p>
+  <p><strong>Round 2 &mdash; grounded.</strong> Add the course material as a source (<strong>+ Add Source</strong>). Set the notebook&rsquo;s Instructions to: <em>&ldquo;You are my study assistant. Prioritize answers from my uploaded sources. Do not fill in with outside discipline knowledge without clearly flagging that it is not from my course materials.&rdquo;</em> Ask the exact same question again. Save this answer too.</p>
+
+  <h2 class="section-title">Compare and Verify</h2>
+  <ul>
+    <li>What&rsquo;s different between the cold and grounded answer &mdash; new vocabulary, different organization, different level of detail?</li>
+    <li>Does the grounded answer sound like <em>your</em> class &mdash; the specific framing and terms your instructor actually uses?</li>
+    <li>Pick one specific claim from a grounded answer. Check it against the actual course material, not against the AI. Confirmed, contradicted, or overstated?</li>
+  </ul>
+
+  <h2 class="section-title">Debrief Question</h2>
+  <p>Nothing about the underlying AI model changed between the cold and grounded questions on either platform. What did change &mdash; and what does that tell you about treating a confident-sounding AI answer as evidence that the system actually has what it needs to answer you well?</p>
+  <p style="color:var(--ink-faint); font-size:0.88rem;">This is the same debrief question as Unit 1, Activity 2 &mdash; intentional continuity, not an oversight.</p>
+</div>
+
+<footer class="pagefoot">
+  <div class="snap">Snapshot as of 2026-08-12</div>
+  <p>Adapted by the pilot lead with Claude, 2026-08-12, from Unit 1 Activity 2 and the &ldquo;Build a Study Bot&rdquo; use cases in the AI literacy source library. Not yet reviewed by other faculty.</p>
+</footer>
