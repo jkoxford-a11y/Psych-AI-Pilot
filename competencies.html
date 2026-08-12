@@ -35,21 +35,22 @@
 
   <div class="concept">
     <h3><span class="concept-num">1</span>Context is everything</h3>
-    <p>The model only knows two things: its training and what's in the <strong>current conversation</strong>.
-    That's it. This one idea explains almost everything else:</p>
+    <p>A competent AI user knows what the system currently has access to, what it doesn't, and manages that
+    deliberately. That access comes from a few different places, and mixing them up is where most confusion
+    starts:</p>
     <ul>
-      <li>Custom bots work because instructions + knowledge files are just <strong>pre-loaded, persistent context</strong></li>
-      <li>Long conversations degrade because context has limits</li>
-      <li>The bot "forgot" what you told it last week because <strong>nothing carries over between sessions automatically</strong></li>
-      <li>Uploading your syllabus changes the answers because now it's <em>in the context</em></li>
+      <li><strong>Pretrained knowledge</strong> is frozen at a cutoff date — ask about anything after that, or anything it was never trained on (your syllabus, this semester), and it's guessing</li>
+      <li><strong>What you supply in the conversation</strong> — instructions, pasted text, uploaded files — is why a custom bot's knowledge files change the answers, and why very long chats start to degrade once that context fills up</li>
+      <li><strong>Retrieved or searched results</strong> (web search, a course RAG bot) mean it's <em>composing</em> an answer from what it found, not stating a fact from memory</li>
+      <li><strong>Tools and connected sources</strong> vary by system — some bots keep persistent memory or live data access across sessions, most don't, and assuming the wrong one is a common failure</li>
     </ul>
-    <p>If you internalize "the model's behavior is a function of what's in its context right now," you can debug
-    most of your own problems.</p>
+    <p>If you internalize "the model's behavior is a function of what it currently has access to — and I know
+    what that is," you can debug most of your own problems.</p>
     <details class="disclosure">
       <summary>What it looks like</summary>
       <div class="naive-competent">
         <div class="nc-block naive"><span class="nc-label">Naive</span>Forty messages into one chat, the answers get worse and start contradicting earlier ones — and the user keeps pushing. Or: "Why doesn't it remember the rubric I gave it last Tuesday?"</div>
-        <div class="nc-block competent"><span class="nc-label">Competent</span>Starts a fresh chat for each new task and re-supplies what matters. Anything needed <em>every time</em> (rubric, course policies, tone) goes into a custom bot's instructions or knowledge files — that's the entire reason custom bots exist.</div>
+        <div class="nc-block competent"><span class="nc-label">Competent</span>Knows whether this particular tool has persistent memory or not, and acts accordingly — re-supplies what matters each time on tools that don't, checks what's actually been retained on tools that do. Anything needed <em>every time</em> (rubric, course policies, tone) goes into a custom bot's instructions or knowledge files regardless — that's the entire reason custom bots exist.</div>
       </div>
     </details>
   </div>
