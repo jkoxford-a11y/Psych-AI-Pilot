@@ -27,10 +27,11 @@
   <p>Course learning is different. Do not automatically ask AI the instant something becomes difficult. Some struggle is useful. A good first conversation is: <em>“Explain desirable difficulty and help me decide when AI is helping me learn versus doing the thinking for me.”</em></p>
 
   <h2 class="section-title">1. Make one custom bot for every class</h2>
-  <p>A class bot gives you a stable place for that course’s instructions and materials. Build one for each course instead of mixing several classes into one general bot.</p>
+  <p>A class bot gives you a stable place for that course’s instructions and materials. Build one for each course instead of mixing several classes into one general bot. Set it up once — including your personal AI context file, not just the course knowledge — and it stays useful all semester.</p>
   <ol>
     <li>Create the class bot in the Bot Builder.</li>
     <li>Add the Socratic tutor instructions below.</li>
+    <li>Build your personal AI context file (below) and attach it too — a bot works better once it knows how you want to be taught, not just what the course covers.</li>
     <li>Add the syllabus.</li>
     <li>Add your running Course Notes Ledger.</li>
     <li>Add other high-value course materials within the 10-knowledge-source limit.</li>
@@ -55,21 +56,7 @@ When I am working through a concept:
 Your job is to help me become less dependent on you as I learn, not more dependent.</div>
   </details>
 
-  <h2 class="section-title">2. Keep one Course Notes Ledger</h2>
-  <p>BoodleBox limits a bot to 10 knowledge sources. Do not use one source for every class meeting. Keep one running document instead—for example, <strong>PSYC 220 Course Notes Ledger</strong>.</p>
-  <ol>
-    <li>Type or transcribe your handwritten notes into the ledger.</li>
-    <li>Check the transcription against your original notes.</li>
-    <li>Date each class section.</li>
-    <li>Preserve terminology your instructor actually used.</li>
-    <li>Add new notes to the same running document.</li>
-    <li>Update the ledger in your class bot as the semester progresses.</li>
-  </ol>
-  <div class="student-habit"><strong>The point:</strong> your AI gets better as the context you maintain gets better.</div>
-
-  <h2 class="section-title">3. Create your personal AI context file</h2>
-  <p>AI can also work differently depending on how you prefer to learn and communicate. Some people want terse answers; others want detailed explanations, challenging questions, or vocabulary that stretches them.</p>
-  <p>Your context file should do more than describe you. It should tell AI how to <strong>challenge you</strong>. That matters because fluent mistakes, hallucinations, and sycophancy are easier to catch when the AI is instructed not to simply validate whatever you say.</p>
+  <p>AI also works differently depending on how you prefer to learn and communicate. Some people want terse answers; others want detailed explanations, challenging questions, or vocabulary that stretches them. Your context file should do more than describe you — it should tell AI how to <strong>challenge you</strong>. That matters because fluent mistakes, hallucinations, and sycophancy are easier to catch when the AI is instructed not to simply validate whatever you say.</p>
 
   <details class="disclosure">
     <summary>Interview prompt: build my AI context file</summary>
@@ -115,7 +102,19 @@ Write it as instructions an AI can immediately use. Include only information I a
   <p>Once you have the document, save it as a knowledge bank item and attach it to every chat &mdash; each class bot, not just the one you built it in &mdash; so AI is personalized to you everywhere, not only in the chat where you created the file. If you are not sure how, ask the bot.</p>
   <div class="prompt-block">Show me how to create a knowledge bank item and how to attach that to chats.</div>
 
-  <h2 class="section-title">4. Hand off long chats</h2>
+  <h2 class="section-title">2. Keep one Course Notes Ledger</h2>
+  <p>BoodleBox limits a bot to 10 knowledge sources. Do not use one source for every class meeting. Keep one running document instead—for example, <strong>PSYC 220 Course Notes Ledger</strong>.</p>
+  <ol>
+    <li>Type or transcribe your handwritten notes into the ledger.</li>
+    <li>Check the transcription against your original notes.</li>
+    <li>Date each class section.</li>
+    <li>Preserve terminology your instructor actually used.</li>
+    <li>Add new notes to the same running document.</li>
+    <li>Update the ledger in your class bot as the semester progresses.</li>
+  </ol>
+  <div class="student-habit"><strong>The point:</strong> your AI gets better as the context you maintain gets better.</div>
+
+  <h2 class="section-title">3. Hand off long chats</h2>
   <p>Around 30 substantive back-and-forth messages is a useful warning point to consider a fresh chat. That is a practical heuristic, not a technical cutoff. Start sooner if the conversation contains lots of pasted material, several topic changes, forgotten instructions, or contradictions.</p>
   <p>Use the same class bot, ask for a handoff, then paste that handoff into a new conversation.</p>
 
