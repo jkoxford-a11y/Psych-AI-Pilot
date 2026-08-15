@@ -1,0 +1,112 @@
+.student-intro {
+  margin-bottom: 1.8em;
+}
+
+.student-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.2em 0 2em;
+}
+
+.student-checklist li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.student-checklist li:last-child { border-bottom: none; }
+
+.student-checklist .check {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  background: var(--panel);
+  margin-top: 2px;
+}
+
+.student-checklist a {
+  font-family: "Futura", "Century Gothic", "Avenir Next", "Segoe UI", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.student-checklist p {
+  margin: 3px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.student-habit {
+  margin: 1.2em 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--accent-soft);
+}
+
+.student-habit strong {
+  font-family: "Futura", "Century Gothic", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.prompt-block {
+  margin: 14px 0 4px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  white-space: pre-wrap;
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.mini-step {
+  border-left: 3px solid var(--accent);
+  padding: 2px 0 2px 16px;
+  margin: 1.2em 0;
+}
+
+.mini-step h3 { margin: 0 0 6px; }
+.mini-step p:last-child { margin-bottom: 0; }
+
+.notice {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--rule);
+  padding-left: 14px;
+  margin: 1em 0 1.4em;
+}
+
+.student-navcards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 1.4em 0 2em;
+}
+
+.student-navcard {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  background: var(--panel);
+}
+
+.student-navcard:hover { border-color: var(--accent); }
+.student-navcard strong {
+  display: block;
+  font-family: "Futura", "Century Gothic", "Avenir Next", "Segoe UI", sans-serif;
+  margin-bottom: 4px;
+}
+.student-navcard span { color: var(--ink-soft); font-size: 0.88rem; }
+
+@media (max-width: 640px) {
+  .student-navcards { grid-template-columns: 1fr; }
+}
