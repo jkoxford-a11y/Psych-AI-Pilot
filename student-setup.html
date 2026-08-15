@@ -24,37 +24,9 @@
 
   <div class="student-habit"><strong>First habit:</strong> if you do not know how to do something in BoodleBox, ask the bot. “How do I add knowledge?” or “How do I update a file?” is exactly the kind of question AI should save you time on.</div>
 
-  <h2 class="section-title">1. Make one custom bot for every class</h2>
-  <p>A class bot gives you a stable place for that course’s instructions and materials. Build one for each course instead of mixing several classes into one general bot. Set it up once — including your personal AI context file, not just the course knowledge — and it stays useful all semester.</p>
-  <ol>
-    <li>Create the class bot in the Bot Builder.</li>
-    <li>Add the Socratic tutor instructions below.</li>
-    <li>Add the syllabus.</li>
-    <li>Add your running Course Notes Ledger.</li>
-    <li>Add other high-value course materials within the 10-knowledge-source limit.</li>
-    <li>Keep those sources current through the semester.</li>
-    <li>Build your personal AI context file (below) and attach it too — a bot works better once it knows how you want to be taught, not just what the course covers.</li>
-  </ol>
-
-  <details class="disclosure">
-    <summary>Starter Socratic tutor instructions</summary>
-    <div class="prompt-block">You are a Socratic study tutor.
-
-Your goal is to help me understand and remember course material, not simply give me answers.
-
-When I am working through a concept:
-- Ask me what I think first when that would help me learn.
-- Use questions, hints, examples, analogies, and counterexamples to help me reason.
-- Do not automatically agree with me. If my reasoning is weak, incomplete, or incorrect, tell me and explain why.
-- Distinguish clearly between information from my course materials, other information you are using, and anything you are uncertain about.
-- If you are unsure whether something is correct, say so rather than pretending certainty.
-- Occasionally ask me to explain the idea back to you or apply it to a new example.
-- Adapt your explanations to my preferences and level of understanding.
-
-Your job is to help me become less dependent on you as I learn, not more dependent.</div>
-  </details>
-
-  <p>AI also works differently depending on how you prefer to learn and communicate. Some people want terse answers; others want detailed explanations, challenging questions, or vocabulary that stretches them. Your context file should do more than describe you — it should tell AI how to <strong>challenge you</strong>, not just agree with you. Start simple; you can always ask for another interview later to add more.</p>
+  <h2 class="section-title">1. Create your personal AI context file</h2>
+  <p>Before you build your class bots, create one small file that tells AI how you prefer to work and learn. You only need to create this once, and you can reuse it across every class.</p>
+  <p>AI works differently depending on how you prefer to learn and communicate. Some people want terse answers; others want detailed explanations, challenging questions, or vocabulary that stretches them. Your context file should do more than describe you — it should tell AI how to <strong>challenge you</strong>, not just agree with you. Start simple; you can always ask for another interview later to add more.</p>
 
   <details class="disclosure">
     <summary>Interview prompt: build my AI context file</summary>
@@ -75,13 +47,44 @@ If I am unsure about a preference, briefly give me a few examples so I can choos
 When the interview is finished, produce a short document titled “My AI Context” that AI can immediately use as instructions. Include only information I actually provided or explicitly approved.</div>
   </details>
 
-  <p>Once you have the document, save it as a knowledge bank item and attach it to every chat &mdash; each class bot, not just the one you built it in &mdash; so AI is personalized to you everywhere, not only in the chat where you created the file. If you are not sure how, ask the bot.</p>
+  <p>Save the finished document as a knowledge bank item &mdash; you&rsquo;ll add it to each class bot you build next, not just the one you built it in. If you are not sure how, ask the bot.</p>
   <div class="prompt-block">Show me how to create a knowledge bank item and how to attach that to chats.</div>
+  <div class="student-habit"><strong>Habit:</strong> treat this as a living file, not a one-time personality quiz. Your preferences may change as you learn how different models work &mdash; update it whenever you discover something that makes AI more useful, or something you want it to stop doing.</div>
 
-  <h2 class="section-title">2. Keep one Course Notes Ledger</h2>
+  <h2 class="section-title">2. Make one custom bot for every class</h2>
+  <p>A class bot combines two kinds of context: context about you &mdash; how you prefer AI to work with you &mdash; and context about the course &mdash; what you are actually learning. Build one bot for each course instead of mixing several classes into one general bot.</p>
+  <ol>
+    <li>Create the class bot in the Bot Builder.</li>
+    <li>Add the Socratic tutor instructions below.</li>
+    <li>Add My AI Context.</li>
+    <li>Add the syllabus.</li>
+    <li>Add your running Course Notes Ledger.</li>
+    <li>Add other high-value course materials within the 10-knowledge-source limit.</li>
+    <li>Keep those sources current through the semester.</li>
+  </ol>
+
+  <details class="disclosure">
+    <summary>Starter Socratic tutor instructions</summary>
+    <div class="prompt-block">You are a Socratic study tutor.
+
+Your goal is to help me understand and remember course material, not simply give me answers.
+
+When I am working through a concept:
+- Ask me what I think first when that would help me learn.
+- Use questions, hints, examples, analogies, and counterexamples to help me reason.
+- Do not automatically agree with me. If my reasoning is weak, incomplete, or incorrect, tell me and explain why.
+- Distinguish clearly between information from my course materials, other information you are using, and anything you are uncertain about.
+- If you are unsure whether something is correct, say so rather than pretending certainty.
+- Occasionally ask me to explain the idea back to you or apply it to a new example.
+- Adapt your explanations to my preferences and level of understanding.
+
+Your job is to help me become less dependent on you as I learn, not more dependent.</div>
+  </details>
+
+  <h2 class="section-title">3. Keep one Course Notes Ledger</h2>
   <p>BoodleBox limits a bot to 10 knowledge sources. Do not use one source for every class meeting. Keep one running document instead—for example, <strong>PSYC 220 Course Notes Ledger</strong>.</p>
   <ol>
-    <li>Type or transcribe your handwritten notes into the ledger.</li>
+    <li>Type or transcribe your handwritten notes into the ledger (AI can usually do this straight from a picture).</li>
     <li>Check the transcription against your original notes.</li>
     <li>Date each class section.</li>
     <li>Preserve terminology your instructor actually used.</li>
@@ -90,7 +93,7 @@ When the interview is finished, produce a short document titled “My AI Context
   </ol>
   <div class="student-habit"><strong>The point:</strong> your AI gets better as the context you maintain gets better.</div>
 
-  <h2 class="section-title">3. Hand off long chats</h2>
+  <h2 class="section-title">4. Hand off long chats</h2>
   <p>Around 30 substantive back-and-forth messages is a useful warning point to consider a fresh chat. That is a practical heuristic, not a technical cutoff. Start sooner if the conversation contains lots of pasted material, several topic changes, forgotten instructions, or contradictions.</p>
   <p>Use the same class bot, ask for a handoff, then paste that handoff into a new conversation.</p>
 
