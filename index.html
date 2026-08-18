@@ -29,21 +29,17 @@
   }
   .stat .lbl { font-size: 0.78rem; color: var(--ink-faint); margin-top: 2px; line-height: 1.4; }
   @media (max-width: 640px) { .stat-strip { grid-template-columns: 1fr; } }
-  .navcards { max-width: 880px; margin: 0 auto; padding: 20px 28px 60px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  @media (max-width: 640px) { .navcards { grid-template-columns: 1fr; } }
-  .navcard {
-    display: block; text-decoration: none; border: 1px solid var(--line); border-radius: 12px;
-    padding: 18px 20px; background: var(--panel); transition: border-color 0.15s ease;
+  .index-pointer {
+    max-width: 660px; margin: 0 auto; padding: 20px 28px 60px;
+    color: var(--ink-soft);
   }
-  .navcard:hover { border-color: var(--accent); }
-  .navcard h4 { font-family: "Futura", "Century Gothic", "Avenir Next", "Segoe UI", sans-serif; margin: 0 0 6px; color: var(--ink); font-size: 1rem; }
-  .navcard p { margin: 0; font-size: 0.86rem; color: var(--ink-faint); }
 </style>
 
 <div class="topbar">
   <a class="mast" href="index.html">Psychology <span>×</span> AI Integration Pilot</a>
   <nav class="toc" id="toc">
     <a href="index.html" class="current">Overview</a>
+    <a href="directory.html">Index</a>
     <a href="students.html">Students</a>
     <a href="roadmap.html">Roadmap</a>
     <a href="fall-2026.html">Fall 2026</a>
@@ -51,7 +47,6 @@
     <a href="activities.html">Activities</a>
     <a href="bootcamp.html">Bootcamp</a>
     <a href="competencies.html">Competencies</a>
-    <a href="resources.html">Resources</a>
     <a href="glossary.html">Glossary</a>
   </nav>
 </div>
@@ -107,20 +102,16 @@
   <p><em>This is a first-year pilot. We do not yet have outcome data — we're designing rigorously so the data we collect this Fall will be interpretable, not asserting in advance that the approach works.</em></p>
 </div>
 
-<div class="navcards">
-  <a class="navcard" href="students.html"><h4>Student AI Toolkit →</h4><p>Self-guided setup for Psychology majors: class bots, a notes ledger, and five experiments worth trying.</p></a>
-  <a class="navcard" href="roadmap.html"><h4>Four-Year Roadmap →</h4><p>The full long-term vision, tier by tier, all four years.</p></a>
-  <a class="navcard" href="fall-2026.html"><h4>Fall 2026 Pilot →</h4><p>What's actually happening this semester, and why it's scoped the way it is.</p></a>
-  <a class="navcard" href="assessment.html"><h4>Assessment Approach →</h4><p>How AI-literacy gain is being measured.</p></a>
-  <a class="navcard" href="activities.html"><h4>Activities &amp; Assignments →</h4><p>Browsable bank of ready-to-use classroom activities, by course.</p></a>
-  <a class="navcard" href="bootcamp.html"><h4>Faculty Bootcamp →</h4><p>The 6-module onboarding sequence for getting started with AI in your course.</p></a>
-  <a class="navcard" href="competencies.html"><h4>AI Competencies →</h4><p>The shared vocabulary connecting what you and your students each need to know.</p></a>
-  <a class="navcard" href="resources.html"><h4>External Resources →</h4><p>Guides and tools published elsewhere, linked from here.</p></a>
+<div class="index-pointer">
+  <p>Everything else on this site — the activities, the assessment battery, the four-year sequence, the
+  student-facing guide — is built around that design. <strong><a href="directory.html">See the Index &rarr;</a></strong>
+  for what's here, page by page, and what each one is for.</p>
 </div>
 
 <footer class="pagefoot">
   <div class="snap">Snapshot as of 2026-08-01</div>
   <p>Contact: Jon Oxford, Psychology — for questions about this pilot, collaboration, or adapting this framework for another program.</p>
+  <p>Designed by Jon Oxford, Claude Code, and ChatGPT.</p>
 </footer>
 
 <script>

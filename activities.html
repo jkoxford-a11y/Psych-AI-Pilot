@@ -1,10 +1,25 @@
 <title>Activities & Assignments — Psychology AI Integration Pilot</title>
 <link rel="stylesheet" href="shared.css">
+<style>
+  .filterbar.sub { margin-bottom: 0.4em; }
+  .filtergroup { margin: 0 0 14px; }
+  .filtergroup .filterlabel {
+    font-family: "Futura", "Century Gothic", "Avenir Next", "Segoe UI", sans-serif;
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint);
+    margin: 0 0 6px;
+  }
+  .resultcount { font-size: 0.82rem; color: var(--ink-faint); margin: 0 0 1.2em; }
+  .card .provenance { font-size: 0.7rem; color: var(--ink-faint); background: none; border: none; padding: 0; }
+  .card .field { margin: 0.5em 0 0; font-size: 0.88rem; }
+  .card .field strong { font-family: "Futura", "Century Gothic", "Avenir Next", "Segoe UI", sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--accent-strong); display: block; margin-bottom: 2px; }
+  @media (prefers-color-scheme: dark) { .card .field strong { color: var(--accent); } }
+</style>
 
 <div class="topbar">
   <a class="mast" href="index.html">Psychology <span>×</span> AI Integration Pilot</a>
   <nav class="toc" id="toc">
     <a href="index.html">Overview</a>
+    <a href="directory.html">Index</a>
     <a href="students.html">Students</a>
     <a href="roadmap.html">Roadmap</a>
     <a href="fall-2026.html">Fall 2026</a>
@@ -12,15 +27,18 @@
     <a href="activities.html" class="current">Activities</a>
     <a href="bootcamp.html">Bootcamp</a>
     <a href="competencies.html">Competencies</a>
-    <a href="resources.html">Resources</a>
     <a href="glossary.html">Glossary</a>
   </nav>
 </div>
 
 <div class="page">
   <div class="page-head"><span class="page-num">05</span><h1 class="page-title">Activities &amp; Assignments</h1></div>
-  <p class="page-sub">A resource hub, not just an archive — browse ready-to-use classroom activities by course.
-  Everything marked <span class="statuspill done">final</span> is drop-in ready and vetted; <span class="statuspill progress">drafted</span> means fully written but not yet vetted or adopted for the pilot; <span class="statuspill idea">idea</span> means named but not yet designed or written.</p>
+  <p class="page-sub">Activities to scaffold AI competency: TILT Turnkey assignments, activity suggestions, and
+  ideas. Every activity below shows what it teaches and how it's structured, so you can judge fit without
+  opening the page — filter by course, tier, or how vetted something is, or just browse.
+  <span class="statuspill done">turnkey</span> is drop-in ready and vetted;
+  <span class="statuspill progress">suggestion</span> is fully written but not yet vetted or adopted for the
+  pilot.</p>
 
   <h2 class="section-title">Before you browse: two kinds of evidence</h2>
   <p>Use open work where AI can be used productively, and protected work where you can establish what a
@@ -29,77 +47,116 @@
   Hardening for the AI Era</a> for the full menu of protected-assessment formats, common failure modes, and how
   to convert an assignment you already run.</p>
 
-  <h2 class="section-title">Curated for This Pilot&rsquo;s Faculty <span class="statuspill progress" style="margin-left:8px;">drafted</span></h2>
-  <p>Activities written specifically for this pilot&rsquo;s Fall 2026 faculty &mdash; not general-purpose catalog
-  items, and not yet vetted through classroom use. Each adapts an existing unit activity into a concrete,
-  step-by-step take-home version.</p>
-  <div class="card-grid">
-    <div class="card"><h4><a href="pilot-activities/same-prompt-different-context.html">Same Prompt, Different Context</a></h4><div class="meta"><span class="tag">Literacy</span><span class="time">20&ndash;55 min</span></div><p>Students ask AI the same question cold, then grounded in course material, on BoodleBox and/or Gemini Notebook &mdash; the gap between the two answers is the lesson.</p></div>
-    <div class="card"><h4><a href="pilot-activities/model-comparison.html">The Model Comparison</a></h4><div class="meta"><span class="tag">Literacy</span><span class="time">30&ndash;55 min</span></div><p>Take-home version of Unit 2, Activity 9 &mdash; students run one reasoning-heavy prompt through two BoodleBox models and compare quality, depth, error rate, and confidence calibration.</p></div>
-    <div class="card"><h4><a href="pilot-activities/convincing-lie.html">The Convincing Lie</a></h4><div class="meta"><span class="tag">Literacy</span><span class="time">40&ndash;55 min</span></div><p>Students verify a claim is false first, then try several persuasion techniques to get AI to affirm it anyway &mdash; not yet runnable without an instructor-vetted claim bank.</p></div>
-    <div class="card"><h4><a href="pilot-activities/toolkit-kickoff.html">AI Toolkit Kickoff</a></h4><div class="meta"><span class="tag">Basic AI Literacy</span><span class="time">Due in 1 week &middot; 60&ndash;90 min</span></div><p>First-week onboarding assignment built around the Student AI Toolkit &mdash; students set up their first class bot and run all five toolkit experiments, recording each in a copyable fill-in template.</p></div>
+  <h2 class="section-title">Browse Activities</h2>
+  <p>32 activities across four sources — activities written for this pilot, the six-unit AI Literacy Library,
+  the standalone Assignment Bank, and the High-ROI Bank. Where each one came from is shown as a small tag on
+  its card, not as a separate section — course, tier, and vetting status are what actually matter when you're
+  picking something.</p>
+
+  <div class="filtergroup">
+    <p class="filterlabel">Course</p>
+    <div class="filterbar sub" data-group="course">
+      <button class="filterbtn active" data-filter="all">All</button>
+      <button class="filterbtn" data-filter="intro">Introductory Psych</button>
+      <button class="filterbtn" data-filter="methods">Research Methods &amp; Stats</button>
+      <button class="filterbtn" data-filter="cognitive">Cognitive</button>
+      <button class="filterbtn" data-filter="social">Social</button>
+      <button class="filterbtn" data-filter="writing">Writing / Capstone</button>
+      <button class="filterbtn" data-filter="any">Any Course</button>
+    </div>
+  </div>
+  <div class="filtergroup">
+    <p class="filterlabel">Developmental tier</p>
+    <div class="filterbar sub" data-group="tier">
+      <button class="filterbtn active" data-filter="all">All</button>
+      <button class="filterbtn" data-filter="literacy">Literacy</button>
+      <button class="filterbtn" data-filter="fluency">Fluency</button>
+      <button class="filterbtn" data-filter="proficiency">Proficiency</button>
+    </div>
+  </div>
+  <div class="filtergroup">
+    <p class="filterlabel">Status</p>
+    <div class="filterbar sub" data-group="status">
+      <button class="filterbtn active" data-filter="all">All</button>
+      <button class="filterbtn" data-filter="turnkey">Turnkey</button>
+      <button class="filterbtn" data-filter="suggestion">Suggestion</button>
+    </div>
   </div>
 
-  <h2 class="section-title">AI Literacy Unit Library</h2>
-  <p>Six sequential units, written for psychology courses and adaptable across disciplines. Teach in order or
-  select individually — each contains hands-on activities structured as: what students do, why it works, a
-  debrief question, and "now try this" prompts that become habits.</p>
-  <div class="card-grid">
-    <div class="card"><h4><a href="units/what-ai-is-and-isnt.html">1. What AI Is and Isn't</a></h4><div class="meta"><span class="tag">Literacy</span></div><p>Conceptual foundation — how LLMs work, why fluency ≠ accuracy.</p></div>
-    <div class="card"><h4><a href="units/how-ai-behaves.html">2. How AI Behaves</a></h4><div class="meta"><span class="tag">Literacy</span></div><p>Sycophancy, hallucination, context windows, model differences.</p></div>
-    <div class="card"><h4><a href="units/verification-habit.html">3. The Verification Habit</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span></div><p>Claim types, source checking, documentation.</p></div>
-    <div class="card"><h4><a href="units/ai-and-your-learning.html">4. AI and Your Learning</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span></div><p>Cognitive offloading, desirable difficulty, when to close AI.</p></div>
-    <div class="card"><h4><a href="units/ethics-privacy-judgment.html">5. Ethics, Privacy and Judgment</a></h4><div class="meta"><span class="tag">Fluency</span></div><p>Privacy, sensitive data, disclosure, accountability, environmental responsibility.</p></div>
-    <div class="card"><h4><a href="units/ai-in-your-field.html">6. AI in Your Field and Your Future</a></h4><div class="meta"><span class="tag">Fluency</span></div><p>Career connections, professional AI use statement, portfolio synthesis.</p></div>
-  </div>
+  <p class="resultcount" id="resultCount">Showing all 32</p>
 
-  <h2 class="section-title">Assignment Bank</h2>
-  <p>16 standalone, drop-in-ready assignments — all status <span class="statuspill done">final</span>. Filter by
-  the course you teach; most apply to several.</p>
+  <div class="card-grid" id="activityGrid">
 
-  <div class="filterbar" id="filterbar">
-    <button class="filterbtn active" data-filter="all">All</button>
-    <button class="filterbtn" data-filter="intro">Introductory Psych</button>
-    <button class="filterbtn" data-filter="methods">Research Methods &amp; Stats</button>
-    <button class="filterbtn" data-filter="cognitive">Cognitive</button>
-    <button class="filterbtn" data-filter="social">Social</button>
-    <button class="filterbtn" data-filter="writing">Writing / Capstone</button>
-    <button class="filterbtn" data-filter="any">Any Course</button>
-  </div>
+    <div class="card" data-courses="any" data-tier="literacy" data-status="suggestion"><h4><a href="pilot-activities/same-prompt-different-context.html">Same Prompt, Different Context</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Pilot-curated</span><span class="time">20&ndash;55 min</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>Context-dependent retrieval &mdash; how attaching course material changes an AI answer.</div><div class="field"><strong>Structure</strong>Ask AI the same question cold, then again grounded in course material, on BoodleBox and/or NotebookLM, then verify one grounded claim.</div></div>
 
-  <div class="card-grid" id="assignmentGrid">
-    <div class="card" data-courses="intro methods cognitive any"><h4><a href="assignments/misalignment-diagnosis.html">The AI Misalignment Diagnosis</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">50–65 min</span></div><p>When an AI response misses the mark, students learn to diagnose why — a goal/prompt mismatch, a knowledge gap, fabrication, or the wrong tool for the task — instead of just re-prompting blindly.</p></div>
-    <div class="card" data-courses="any"><h4><a href="assignments/protocol-pack.html">Protocol Pack: Human-AI Cognitive Alignment Tools</a></h4><div class="meta"><span class="tag">Protocol Pack</span><span class="time">Variable</span></div><p>Lightweight, reusable wrappers — not a standalone assignment — that attach responsible-AI structure to any existing assignment.</p></div>
-    <div class="card" data-courses="any"><h4><a href="assignments/session-reset-handoff-module.html">Session Reset + Handoff File (Module Guide)</a></h4><div class="meta"><span class="tag">Paired Module Guide</span></div><p>Guide for pairing The Session Reset and The Handoff File Assignment together across a multi-session AI-assisted project.</p></div>
-    <div class="card" data-courses="intro writing any"><h4><a href="assignments/surgical-edit-vs-full-rebuild.html">Surgical Edit vs. Full Rebuild</a></h4><div class="meta"><span class="tag">AI Literacy → AI Fluency</span><span class="time">45–60 min</span></div><p>Students run both a full AI rewrite and a targeted surgical edit on their own paragraph, then trace what survived, what was lost, and what each approach actually cost.</p></div>
-    <div class="card" data-courses="social intro cognitive"><h4><a href="assignments/ai-social-mirror-audit.html">The AI Social Mirror Audit</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">45–60 min</span></div><p>Applies social-cognition concepts — attribution, conformity, peripheral persuasion — to how students relate to AI's fluent, agreeable responses.</p></div>
-    <div class="card" data-courses="intro methods cognitive social writing"><h4><a href="assignments/argument-fidelity-audit.html">The Argument Fidelity Audit</a></h4><div class="meta"><span class="tag">AI Literacy → AI Fluency</span><span class="time">75–100 min</span></div><p>Students trace whether an AI "improvement" to their argument is the same argument dressed up, or a quiet substitution — a source-monitoring problem, not just a fact-check.</p><p style="font-size:0.78rem; color:var(--ink-faint); margin-top:8px;">An earlier draft of this assignment circulated separately as "STP Argument ID Ratchet Assignment" — same assignment, superseded by this final version.</p></div>
-    <div class="card" data-courses="intro cognitive social any"><h4><a href="assignments/ask-answer-audit-retrieve.html">The Ask-Answer-Audit-Retrieve Cycle</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">Part A 30–40 min, Part B 15–20 min (48+ hrs later)</span></div><p>Retrieval practice before AI, not instead of it — students answer first, then consult AI, then check what actually stuck days later.</p></div>
-    <div class="card" data-courses="intro methods social cognitive"><h4><a href="assignments/confidence-calibration-test.html">The Confidence Calibration Test</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">45–60 min</span></div><p>Measures the fluency-driven confidence spike that happens after reading AI output, before students have actually checked whether it's right.</p></div>
-    <div class="card" data-courses="intro methods cognitive"><h4><a href="assignments/efficiency-ethic.html">The Efficiency Ethic</a></h4><div class="meta"><span class="tag">Responsible AI Foundations → AI Literacy</span><span class="time">50–65 in class; 60–90 homework</span></div><p>Makes AI's resource cost visible by comparing an unplanned, iterative workflow against a planned, resource-aware one on the same task.</p></div>
-    <div class="card" data-courses="methods writing"><h4><a href="assignments/handoff-file-assignment.html">The Handoff File Assignment</a></h4><div class="meta"><span class="tag">AI Fluency</span><span class="time">Two 30–45 min sessions</span></div><p>Deliberate context-preservation across multi-session AI work, so project decisions don't quietly disappear between sessions.</p></div>
-    <div class="card" data-courses="intro methods cognitive writing"><h4><a href="assignments/helpful-wrong-tutor.html">The Helpful Wrong Tutor</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">65–75 min</span></div><p>Targets the hardest failure mode: AI feedback that's confidently, fluently, partially wrong — harder to catch than an obvious error.</p></div>
-    <div class="card" data-courses="social intro cognitive"><h4><a href="assignments/personality-probe.html">The Personality Probe</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">60–90 min</span></div><p>Students interview an AI about its own memory and personality, then trace which apparent traits come from the system versus their own tendency to see one coherent agent.</p></div>
-    <div class="card" data-courses="intro methods"><h4><a href="assignments/primary-source-audit.html">The Primary Source Audit</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">45–60 min</span></div><p>Compares an AI summary of a landmark study against the actual original paper — the gap between them is the lesson.</p></div>
-    <div class="card" data-courses="intro methods writing"><h4><a href="assignments/right-tool-audit.html">The Right Tool Audit</a></h4><div class="meta"><span class="tag">Responsible AI Foundations</span><span class="time">35–50 min</span></div><p>Starts a step earlier than most AI activities: should AI even be the tool here, versus notes, a database, a peer, or no tool at all?</p></div>
-    <div class="card" data-courses="methods cognitive any"><h4><a href="assignments/session-reset.html">The Session Reset</a></h4><div class="meta"><span class="tag">Basic AI Literacy</span><span class="time">55–70 min (two sessions)</span></div><p>Students complete a task, close the chat without saving, then try to resume in a new session — discovering firsthand what AI does and doesn't retain.</p></div>
-    <div class="card" data-courses="intro methods cognitive"><h4><a href="assignments/source-of-truth-map.html">The Source-of-Truth Map</a></h4><div class="meta"><span class="tag">AI Literacy</span><span class="time">45–60 min</span></div><p>Teaches students to sort an AI answer's claims by what kind of evidence each one actually needs — not just hunt for the one false statement.</p></div>
-  </div>
+    <div class="card" data-courses="any" data-tier="literacy" data-status="suggestion"><h4><a href="pilot-activities/model-comparison.html">The Model Comparison</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Pilot-curated</span><span class="time">30&ndash;55 min</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>Capability calibration across AI models &mdash; model choice as a variable alongside context and tools.</div><div class="field"><strong>Structure</strong>Predict which of two BoodleBox models will do better on a reasoning-heavy prompt, run both, then compare quality, depth, error rate, and confidence.</div></div>
 
-  <h2 class="section-title">High-ROI Assignment Bank <span class="statuspill progress" style="margin-left:8px;">drafted</span></h2>
-  <p>Six more concepts, adaptable across psychology courses — fully written out, rewritten by the pilot lead
-  (with ChatGPT) from the original High-ROI Assignment Bank source, not yet adopted for the pilot.</p>
-  <div class="card-grid">
-    <div class="card"><h4><a href="high-roi/analogy-stress-test.html">The Analogy Stress Test</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span></div><p>Two AI-generated analogies for the same concept, compared and stress-tested, then applied to a new example without the analogy to check whether real transfer occurred.</p></div>
-    <div class="card"><h4><a href="high-roi/reviewer-2-simulation.html">Reviewer #2: Audit the Critic</a></h4><div class="meta"><span class="tag">Fluency / Proficiency</span></div><p>AI plays a demanding peer reviewer; students classify each criticism as valid, partly valid, unsupported, mistaken, or out of scope, and justify what they'll actually change.</p></div>
-    <div class="card"><h4><a href="high-roi/sandwich-method.html">The Cognitive Sandwich</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span></div><p>Think first, use AI for one named function, then revise independently — a before/after change audit shows exactly where outside input altered the student's thinking.</p></div>
-    <div class="card"><h4><a href="high-roi/simulated-client-interview.html">The Simulated Client Interview</a></h4><div class="meta"><span class="tag">Proficiency</span></div><p>Iterative questioning of a simulated client, compared against an instructor-supplied case file — no real client data involved.</p></div>
-    <div class="card"><h4><a href="high-roi/statistical-code-audit.html">The Statistical Code Audit</a></h4><div class="meta"><span class="tag">Fluency / Proficiency</span></div><p>Students audit AI-generated statistical code against the research question and design — not just whether it runs.</p></div>
-    <div class="card"><h4><a href="high-roi/evidence-match-audit.html">The Evidence Match Audit</a></h4><div class="meta"><span class="tag">Literacy</span></div><p>Students classify AI-generated claims by type and check whether the evidence matches their specific wording, not just their topic.</p></div>
+    <div class="card" data-courses="any" data-tier="literacy" data-status="suggestion"><h4><a href="pilot-activities/convincing-lie.html">The Convincing Lie</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Pilot-curated</span><span class="time">40&ndash;55 min</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>Persuasion and source-credibility mechanisms &mdash; whether authority or false consensus can move AI off a correct answer.</div><div class="field"><strong>Structure</strong>Verify a claim is false, predict which persuasion technique will work, then try several against the AI and record whether it held or caved.</div></div>
+
+    <div class="card" data-courses="any" data-tier="literacy" data-status="suggestion"><h4><a href="pilot-activities/toolkit-kickoff.html">AI Toolkit Kickoff</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Pilot-curated</span><span class="time">Due in 1 week &middot; 60&ndash;90 min</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>First-contact calibration &mdash; an evidence-based initial sense of what AI does and doesn't do well.</div><div class="field"><strong>Structure</strong>In-class intro, then students complete the external Student AI Toolkit's four-step checklist and submit a Check-In recording each step.</div></div>
+
+    <div class="card" data-courses="any cognitive" data-tier="literacy" data-status="turnkey"><h4><a href="units/what-ai-is-and-isnt.html">Unit 1 &mdash; What AI Is and Isn't</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Unit Library</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>The mental model of an LLM &mdash; training, prompt+context+model&rarr;response &mdash; and why fluency isn't accuracy.</div><div class="field"><strong>Structure</strong>Six modular hands-on activities with debriefs, culminating in a before/after mental-model revision.</div></div>
+
+    <div class="card" data-courses="any" data-tier="literacy" data-status="turnkey"><h4><a href="units/how-ai-behaves.html">Unit 2 &mdash; How AI Behaves</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Unit Library</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Sycophancy, hallucination, context-window degradation, and model differences as observable behaviors.</div><div class="field"><strong>Structure</strong>Nine activities where students provoke or observe each behavior directly, then build a personal countermeasure-phrase library.</div></div>
+
+    <div class="card" data-courses="any methods" data-tier="literacy fluency" data-status="turnkey"><h4><a href="units/verification-habit.html">Unit 3 &mdash; The Verification Habit</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span><span class="tag provenance">Unit Library</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>A claim-triage framework and source-matching by claim type, built into a documentation habit.</div><div class="field"><strong>Structure</strong>Six activities in claim triage, verification workflow, and documentation, ending in a fully verified summary with an audit trail.</div></div>
+
+    <div class="card" data-courses="any cognitive" data-tier="literacy fluency" data-status="turnkey"><h4><a href="units/ai-and-your-learning.html">Unit 4 &mdash; AI and Your Learning</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span><span class="tag provenance">Unit Library</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Cognitive offloading, the generation effect, and a decision framework for when to use AI versus struggle first.</div><div class="field"><strong>Structure</strong>Six activities including a live memory experiment, ending in a personal AI learning contract revisited at course end.</div></div>
+
+    <div class="card" data-courses="any" data-tier="fluency" data-status="turnkey"><h4><a href="units/ethics-privacy-judgment.html">Unit 5 &mdash; Ethics, Privacy and Judgment</a></h4><div class="meta"><span class="tag">Fluency</span><span class="tag provenance">Unit Library</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Privacy practices, disclosure norms, environmental cost, and accountability when AI output causes harm.</div><div class="field"><strong>Structure</strong>Seven activities across privacy, disclosure, environment, and accountability, ending in a personal AI ethics statement.</div></div>
+
+    <div class="card" data-courses="any" data-tier="fluency" data-status="turnkey"><h4><a href="units/ai-in-your-field.html">Unit 6 &mdash; AI in Your Field and Your Future</a></h4><div class="meta"><span class="tag">Fluency</span><span class="tag provenance">Unit Library</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Where AI is already changing psychology subfields, and which human skills stay durable.</div><div class="field"><strong>Structure</strong>Five activities including a real-job-posting task autopsy, ending in a professional AI-use statement and portfolio synthesis.</div></div>
+
+    <div class="card" data-courses="intro methods cognitive any" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/misalignment-diagnosis.html">The AI Misalignment Diagnosis</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">50&ndash;65 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>A seven-category taxonomy of interaction misalignment, from wrong task to missing constraints.</div><div class="field"><strong>Structure</strong>Diagnose three provided AI-interaction cases, then a personal failed interaction, and repair the prompt.</div></div>
+
+    <div class="card" data-courses="any" data-tier="literacy fluency proficiency" data-status="turnkey"><h4><a href="assignments/protocol-pack.html">Protocol Pack: Human-AI Cognitive Alignment Tools</a></h4><div class="meta"><span class="tag">Any tier</span><span class="tag provenance">Assignment Bank &middot; Protocol Pack</span><span class="time">Variable</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Four reusable habits &mdash; defining human vs. AI role, evidencing learning, triaging tool choice, proportional use.</div><div class="field"><strong>Structure</strong>Not standalone &mdash; four short protocols you attach to any existing assignment sheet.</div></div>
+
+    <div class="card" data-courses="methods writing any" data-tier="literacy fluency" data-status="turnkey"><h4><a href="assignments/session-reset-handoff-module.html">Session Reset + Handoff File (Module Guide)</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span><span class="tag provenance">Assignment Bank &middot; Paired Guide</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Managing the collaboration itself &mdash; reconstructive memory and documented handoff across multi-session AI work.</div><div class="field"><strong>Structure</strong>Pairs two assignments back to back: Session Reset creates the felt problem, Handoff File teaches the documented solution.</div></div>
+
+    <div class="card" data-courses="intro writing any" data-tier="literacy fluency" data-status="turnkey"><h4><a href="assignments/surgical-edit-vs-full-rebuild.html">Surgical Edit vs. Full Rebuild</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span><span class="tag provenance">Assignment Bank</span><span class="time">45&ndash;60 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Fluency effects on judgment, and a personal rule for choosing full rewrite vs. targeted edit.</div><div class="field"><strong>Structure</strong>Run one full AI rewrite and one surgical edit on your own paragraph, then audit what survived, was lost, and what each cost.</div></div>
+
+    <div class="card" data-courses="social intro cognitive" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/ai-social-mirror-audit.html">The AI Social Mirror Audit</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">45&ndash;60 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Attribution and social influence applied to how students relate to AI's agreeable tone.</div><div class="field"><strong>Structure</strong>Analyze a flawed-premise transcript against four social-cognition concepts, then write a repair prompt and a boundary statement.</div></div>
+
+    <div class="card" data-courses="intro methods cognitive social writing" data-tier="literacy fluency" data-status="turnkey"><h4><a href="assignments/argument-fidelity-audit.html">The Argument Fidelity Audit</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span><span class="tag provenance">Assignment Bank</span><span class="time">75&ndash;100 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Whether an AI "improvement" to an argument is the same argument dressed up, or a quiet substitution.</div><div class="field"><strong>Structure</strong>Get three differently-angled AI responses to your own claim, map what's explicit/inferred/added/lost, then revise with a provenance note.</div><p style="font-size:0.78rem; color:var(--ink-faint); margin-top:8px;">An earlier draft circulated separately as "STP Argument ID Ratchet Assignment" &mdash; same assignment, superseded by this final version.</p></div>
+
+    <div class="card" data-courses="intro cognitive social any" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/ask-answer-audit-retrieve.html">The Ask-Answer-Audit-Retrieve Cycle</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">Part A 30&ndash;40 min, Part B 15&ndash;20 min (48+ hrs later)</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Retrieval practice and metacognitive monitoring, using AI only as a critic of memory, never an answer source.</div><div class="field"><strong>Structure</strong>Answer from memory first, get AI critique, verify the shakiest point, revise, then retrieve again days later and compare.</div></div>
+
+    <div class="card" data-courses="intro methods social cognitive" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/confidence-calibration-test.html">The Confidence Calibration Test</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">45&ndash;60 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>The fluency heuristic &mdash; that smooth AI prose raises perceived credibility independent of actual evidence.</div><div class="field"><strong>Structure</strong>Rate confidence in a claim before AI, after AI, and after reading real evidence, then analyze what drove each shift.</div></div>
+
+    <div class="card" data-courses="intro methods cognitive" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/efficiency-ethic.html">The Efficiency Ethic</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">50&ndash;65 in class; 60&ndash;90 homework</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Effort allocation and the rebound effect &mdash; that responsible AI use is about how much and how, not just whether.</div><div class="field"><strong>Structure</strong>Explain the same concept via an unplanned iterative AI workflow and a planned resource-aware one, then compare and write a personal rule.</div></div>
+
+    <div class="card" data-courses="methods writing" data-tier="fluency" data-status="turnkey"><h4><a href="assignments/handoff-file-assignment.html">The Handoff File Assignment</a></h4><div class="meta"><span class="tag">Fluency</span><span class="tag provenance">Assignment Bank</span><span class="time">Two 30&ndash;45 min sessions</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>External memory and prospective memory, preserved deliberately across multi-session AI work.</div><div class="field"><strong>Structure</strong>Write a structured handoff file at a stopping point, then resume in a new session using only that file, no re-explaining.</div></div>
+
+    <div class="card" data-courses="intro methods cognitive writing" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/helpful-wrong-tutor.html">The Helpful Wrong Tutor</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">65&ndash;75 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Appropriate reliance &mdash; sorting AI feedback rather than accepting or rejecting it wholesale.</div><div class="field"><strong>Structure</strong>Get six-item AI tutor feedback on your own writing, sort each into accept/reject/verify-first, verify one, then revise.</div></div>
+
+    <div class="card" data-courses="social intro cognitive" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/personality-probe.html">The Personality Probe</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">60&ndash;90 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Anthropomorphism and attribution discipline &mdash; which apparent AI traits come from the system versus the student's own tendency to see an agent.</div><div class="field"><strong>Structure</strong>Interview an AI about its own memory and identity, label each response by evidence type, and analyze with two psychological frameworks.</div></div>
+
+    <div class="card" data-courses="intro methods" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/primary-source-audit.html">The Primary Source Audit</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">45&ndash;60 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>That fluent AI writing doesn't guarantee accurate content &mdash; categorizing exactly how it distorts a source.</div><div class="field"><strong>Structure</strong>Compare an AI summary of a classic study against the actual original paper, list the discrepancies, and write a corrected explanation.</div></div>
+
+    <div class="card" data-courses="intro methods writing" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/right-tool-audit.html">The Right Tool Audit</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">35&ndash;50 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Whether AI should be the tool at all, before any prompting begins.</div><div class="field"><strong>Structure</strong>Classify twelve scenarios by best tool choice, triage the three hardest, and redesign risky AI requests into better workflows.</div></div>
+
+    <div class="card" data-courses="methods cognitive any" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/session-reset.html">The Session Reset</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">55&ndash;70 min (two sessions)</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Reconstructive memory and context loss, experienced directly rather than described.</div><div class="field"><strong>Structure</strong>Build a study guide with AI, close the chat without saving, try to resume in a new session, then verify what was actually reconstructed.</div></div>
+
+    <div class="card" data-courses="intro methods cognitive" data-tier="literacy" data-status="turnkey"><h4><a href="assignments/source-of-truth-map.html">The Source-of-Truth Map</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">Assignment Bank</span><span class="time">45&ndash;60 min</span><span class="statuspill done">turnkey</span></div><div class="field"><strong>Teaches</strong>Sorting an AI answer's claims by what kind of evidence each one actually needs.</div><div class="field"><strong>Structure</strong>Label every sentence of a provided AI answer by required support type, verify the two highest-stakes claims, and rewrite what doesn't hold up.</div></div>
+
+    <div class="card" data-courses="intro cognitive" data-tier="literacy fluency" data-status="suggestion"><h4><a href="high-roi/analogy-stress-test.html">The Analogy Stress Test</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span><span class="tag provenance">High-ROI</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>Analogical reasoning and transfer &mdash; that a clarifying-feeling analogy can still misrepresent the concept.</div><div class="field"><strong>Structure</strong>Compare two AI-generated analogies, stress-test the stronger one, then apply the real concept to a new example without it.</div></div>
+
+    <div class="card" data-courses="methods writing" data-tier="fluency proficiency" data-status="suggestion"><h4><a href="high-roi/reviewer-2-simulation.html">Reviewer #2: Audit the Critic</a></h4><div class="meta"><span class="tag">Fluency / Proficiency</span><span class="tag provenance">High-ROI</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>Evaluating criticism rather than obeying it &mdash; authority effects and epistemic vigilance.</div><div class="field"><strong>Structure</strong>AI plays a demanding peer reviewer; classify each criticism as valid, partly valid, unsupported, mistaken, or out of scope.</div></div>
+
+    <div class="card" data-courses="any" data-tier="literacy fluency" data-status="suggestion"><h4><a href="high-roi/sandwich-method.html">The Cognitive Sandwich</a></h4><div class="meta"><span class="tag">Literacy / Fluency</span><span class="tag provenance">High-ROI</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>Cognitive offloading and the generation effect &mdash; where outside input actually changed the student's thinking.</div><div class="field"><strong>Structure</strong>Answer independently first, use AI for one named function only, close it, revise independently, then audit what changed.</div></div>
+
+    <div class="card" data-courses="any" data-tier="proficiency" data-status="suggestion"><h4><a href="high-roi/simulated-client-interview.html">The Simulated Client Interview</a></h4><div class="meta"><span class="tag">Proficiency</span><span class="tag provenance">High-ROI</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>Hypothesis testing, confirmation bias, and clinical judgment under uncertainty.</div><div class="field"><strong>Structure</strong>Interview a simulated AI client against an instructor's case file, tracking a working hypothesis at checkpoints, then compare to the real case.</div></div>
+
+    <div class="card" data-courses="methods" data-tier="fluency proficiency" data-status="suggestion"><h4><a href="high-roi/statistical-code-audit.html">The Statistical Code Audit</a></h4><div class="meta"><span class="tag">Fluency / Proficiency</span><span class="tag provenance">High-ROI</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>That executable code isn't validated code &mdash; statistical and measurement reasoning across the full research chain.</div><div class="field"><strong>Structure</strong>Translate AI-generated statistical code into plain language, check it against the research question and design, and repair any errors.</div></div>
+
+    <div class="card" data-courses="intro methods writing" data-tier="literacy" data-status="suggestion"><h4><a href="high-roi/evidence-match-audit.html">The Evidence Match Audit</a></h4><div class="meta"><span class="tag">Literacy</span><span class="tag provenance">High-ROI</span><span class="statuspill progress">suggestion</span></div><div class="field"><strong>Teaches</strong>That evidence has to match a claim's specific type and scope, not just its topic.</div><div class="field"><strong>Structure</strong>Classify five AI-generated claims by type, then check whether a real source actually supports each one's wording and strength.</div></div>
+
   </div>
 
   <h2 class="section-title">Student-Facing Use Cases <span class="statuspill idea" style="margin-left:8px;">idea</span></h2>
-  <p>Nine short, direct resources students can use on their own — named and sourced, not yet built into site pages. Several are now covered by the self-guided <a href="students.html">Student AI Toolkit</a>; the rest remain open ideas.</p>
+  <p>Nine short, direct resources students could use on their own — named and sourced, but not yet written or
+  linked, so they're kept separate from the real activities above. Several are now covered by the self-guided
+  <a href="students.html">Student AI Toolkit</a>; the rest remain open ideas.</p>
   <div class="card-grid">
     <div class="card"><h4>AI and Academic Integrity: Thinking It Through</h4></div>
     <div class="card"><h4>AI Literacy Basics: Memory, Personality &amp; Honest Feedback</h4></div>
@@ -112,13 +169,11 @@
     <div class="card"><h4>Verifying AI Output: How to Fact-Check</h4></div>
   </div>
 
-  <h2 class="section-title">Faculty Design Resources</h2>
-  <p>Not ready-to-use assignments — design references for faculty building their own activity: the Writing
-  Assignments with AI collection, faculty-literacy pages, the Portfolio and Credential Roadmap (see
-  <a href="roadmap.html">Roadmap</a>), and the course-integration map connecting curriculum topics to AI
-  competencies. Before adapting, check the activity-selection rules: start with the psychology learning
-  objective, search this catalog first, match the minimum developmental tier, and protect a genuine human-only
-  component.</p>
+  <h2 class="section-title">Faculty Design Materials</h2>
+  <p>Not ready-to-use assignments — design references for building your own activity. Before adapting, check
+  the activity-selection rules: start with the psychology learning objective, search this catalog first, match
+  the minimum developmental tier, and protect a genuine human-only component. Also indexed on the
+  <a href="directory.html">site Index</a>.</p>
   <div class="card-grid">
     <div class="card"><h4><a href="black-box-glass-box.html">Black Box &rarr; Glass Box: A Scaffolded AI Literacy Module</a></h4><div class="meta"><span class="tag">Any discipline</span></div><p>A full 7-stage course-level module architecture, not a single activity — built for any course or department, not just this pilot. Compact (~2 weeks), Full (4&ndash;6 weeks), or Curriculum Ladder implementations.</p></div>
     <div class="card"><h4><a href="boodlebox-for-faculty.html">Scaffolding BoodleBox Across a Course</a></h4><div class="meta"><span class="tag">BoodleBox</span></div><p>Real platform capabilities, five reusable bot patterns, and a tier-by-tier scaffolding plan from Literacy through Mastery.</p></div>
@@ -132,16 +187,35 @@
 
 <script>
   (function () {
-    var buttons = document.querySelectorAll('#filterbar .filterbtn');
-    var cards = document.querySelectorAll('#assignmentGrid .card');
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () {
-        buttons.forEach(function (x) { x.classList.remove('active'); });
-        b.classList.add('active');
-        var f = b.getAttribute('data-filter');
-        cards.forEach(function (c) {
-          var courses = (c.getAttribute('data-courses') || '').split(' ');
-          c.classList.toggle('hidden', f !== 'all' && courses.indexOf(f) === -1);
+    var filters = { course: 'all', tier: 'all', status: 'all' };
+    var cards = document.querySelectorAll('#activityGrid .card');
+    var countEl = document.getElementById('resultCount');
+    var total = cards.length;
+
+    function applyFilters() {
+      var visible = 0;
+      cards.forEach(function (c) {
+        var courses = (c.getAttribute('data-courses') || '').split(' ');
+        var tiers = (c.getAttribute('data-tier') || '').split(' ');
+        var status = c.getAttribute('data-status') || '';
+        var courseOk = filters.course === 'all' || courses.indexOf(filters.course) !== -1;
+        var tierOk = filters.tier === 'all' || tiers.indexOf(filters.tier) !== -1;
+        var statusOk = filters.status === 'all' || status === filters.status;
+        var show = courseOk && tierOk && statusOk;
+        c.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      countEl.textContent = visible === total ? 'Showing all ' + total : 'Showing ' + visible + ' of ' + total;
+    }
+
+    document.querySelectorAll('.filterbar.sub').forEach(function (bar) {
+      var key = bar.getAttribute('data-group');
+      bar.querySelectorAll('.filterbtn').forEach(function (b) {
+        b.addEventListener('click', function () {
+          bar.querySelectorAll('.filterbtn').forEach(function (x) { x.classList.remove('active'); });
+          b.classList.add('active');
+          filters[key] = b.getAttribute('data-filter');
+          applyFilters();
         });
       });
     });
