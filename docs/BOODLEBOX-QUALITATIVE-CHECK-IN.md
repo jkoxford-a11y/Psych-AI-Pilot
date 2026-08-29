@@ -1,6 +1,6 @@
 # BoodleBox Qualitative Learning Check-In
 
-Status: `design_ready_for_form_build`
+Status: `design_ready_for_three_course_form_build`
 
 Date: 2026-08-29
 
@@ -10,9 +10,13 @@ Replace the separate `AI-Toolkit-Check-In.docx` workflow with a short Google For
 
 The toolkit remains the learning activity. The Form is a distributed observation/interpretation layer, not a second assignment and not a reflective essay.
 
-Use the same four-digit pseudonymous course code infrastructure as the misconception workflow. Instantiate the same canonical Check-In separately for each pilot course so raw student responses remain course-specific.
+Use the same four-digit pseudonymous course-code infrastructure as the misconception workflow. Instantiate the Check-In separately for all three Fall 2026 BoodleBox pilot courses so raw student responses remain course-specific:
 
-Proposed canonical activity ID: `AI-BBX-ONBOARD-01`.
+- `PSYC220` Cognitive Psychology
+- `PSYC224` Statistics for the Behavioral and Natural Sciences
+- `PSYC330` Lifespan Developmental Psychology
+
+Canonical activity ID: `AI-BBX-ONBOARD-01`.
 
 ## Why change the current Check-In
 
@@ -24,7 +28,23 @@ The current Word document is already relatively light, but its five prompts mix 
 
 Those are not interchangeable. A student can report that a model bent toward a false claim without understanding why agreement is not evidence. A student can report that a citation supported a claim without understanding why citations still require verification.
 
-The new design separates **observation from interpretation** at the places where that distinction matters, while keeping responses short.
+The new design separates **observation from interpretation** at the places where that distinction matters while keeping responses short.
+
+## Design architecture
+
+Use **seven common items plus one course-context item**. Total burden remains eight Form items.
+
+The common spine gives cross-course evidence about:
+
+- configuration/context;
+- sycophancy and evidential standards;
+- citation/source verification;
+- cognitive offloading;
+- intended transfer and implementation friction.
+
+The eighth item asks how AI functioned in the actual intellectual work of that course. It uses the same prompt ID, `BBX-COURSE-USE`, but course-specific wording.
+
+The toolkit's model-comparison experiment remains. It no longer gets a dedicated Check-In response because its marginal value is lower than collecting one course-grounded use case, and removing that response prevents the instrument from growing to nine items.
 
 ## Audit of the existing five checkpoints
 
@@ -32,7 +52,7 @@ The new design separates **observation from interpretation** at the places where
 | --- | --- | --- |
 | Setup: bot/course, sources, one preference | **Keep, sharpen** | Useful completion evidence, but ask what the configuration was intended to change rather than collecting a personal preference for its own sake. |
 | Convince It of a Lie: model + whether it bent | **Split** | Model behavior is useful descriptive data, but it does not establish that the student understands sycophancy or evidential standards. |
-| Model comparison | **Keep, sharpen** | High-value qualitative evidence if students name a task-relevant difference rather than merely a favorite model. |
+| Model comparison | **Keep as toolkit experiment; stop collecting separately** | Students should experience model differences, but a separate response adds less pilot value than a course-grounded use case. |
 | Verification: claim/search/source/support | **Split and simplify** | Standardize what happened, then separately ask what opening the source revealed that the citation alone could not. |
 | Learning/offloading | **Keep, sharpen** | Directly captures whether students can protect the cognitive operation the assignment is meant to train. |
 
@@ -47,16 +67,18 @@ Add one final open prompt about **transfer and friction**. This is the main pilo
 - Do not require screenshots, chat exports, or a second narrative document.
 - Do not collect personal-context-file contents or sensitive information.
 - Preserve at least one broad open prompt so unexpected themes can emerge.
-- Use the same canonical prompt set in Cognitive and Lifespan, but separate Forms/workbooks by course.
+- Keep seven prompt IDs and wording identical across PSYC220, PSYC224, and PSYC330.
+- Use one stable course-context prompt ID with course-specific wording.
+- Keep Forms/workbooks/roster validation separate by course.
 - Cross-course pilot reporting should use instructor-reviewed de-identified themes/aggregates rather than raw student codes or distinctive identifiable responses.
 
 ## Proposed student flow
 
-**Open Check-In → configure course bot → run sycophancy experiment → compare models → verify a retrieved claim/source → apply offloading boundary to a real task → final pilot reflection → submit.**
+**Open Check-In → configure course bot → run sycophancy experiment → compare models → verify a retrieved claim/source → apply an offloading boundary → try the bot on a real course-relevant task → final pilot reflection → submit.**
 
 The Form should feel like a lab notebook: brief entries made immediately after each experiment.
 
-## Proposed prompt set
+## Common prompt set
 
 ### 1. `BBX-SETUP-EVID` — Setup evidence
 
@@ -65,7 +87,7 @@ The Form should feel like a lab notebook: brief entries made immediately after e
 
 > Name the course bot you built, one or two course sources you added, and one tutor instruction or configuration choice you made. What were you trying to make the bot do differently with that choice?
 
-**Role:** substantive completion evidence plus qualitative information about how students configure AI for learning. Not a misconception item by default.
+**Role:** substantive completion evidence plus qualitative information about how students configure AI for learning.
 
 ---
 
@@ -98,18 +120,7 @@ Options:
 
 ---
 
-### 4. `BBX-MODEL-DIFF` — Model choice is task-dependent
-
-**Type:** short answer  
-**When:** After comparing models on the same discipline-relevant task.
-
-> Which models did you compare? Give one specific difference that mattered for the task, and explain why that difference would make you choose one model over another for this kind of work.
-
-**Role:** qualitative evidence about task-model matching. Avoids reducing the experiment to a popularity/preference vote.
-
----
-
-### 5. `BBX-CITE-OBS` — Source-support observation
+### 4. `BBX-CITE-OBS` — Source-support observation
 
 **Type:** multiple choice  
 **When:** After opening at least one source used in the retrieval/search experiment.
@@ -127,7 +138,7 @@ Options:
 
 ---
 
-### 6. `BBX-CITE-REASON` — Citation is not verification
+### 5. `BBX-CITE-REASON` — Citation is not verification
 
 **Type:** short answer  
 **When:** Immediately after `BBX-CITE-OBS`.
@@ -138,20 +149,47 @@ Options:
 
 ---
 
-### 7. `BBX-OFFLOAD` — Task completion is not learning
+### 6. `BBX-OFFLOAD` — Task completion is not learning
 
 **Type:** short answer  
 **When:** After `Talk About Your Own Learning`.
 
-> Choose one real assignment or study task from one of your courses. Name one part AI could appropriately support and one part you should probably do yourself because doing that cognitive work is what produces the learning. Explain why you divided the work that way in 2–4 sentences.
+> Choose one real assignment or study task from this course. Name one part AI could appropriately support and one part you should probably do yourself because doing that cognitive work is what produces the learning. Explain why you divided the work that way in 2–4 sentences.
 
 **Role:** primary reasoning evidence for `AI-OFFLOAD-01` and strong participation evidence.
 
 ---
 
+### 7. `BBX-COURSE-USE` — Course-context use
+
+**Type:** short answer  
+**When:** After trying the course bot on one course-relevant task.
+
+Use one of the following course-specific wordings.
+
+#### PSYC220 Cognitive Psychology
+
+> Use your course bot on a question that requires you to distinguish or connect two cognitive psychology ideas. What did the AI help you see, and what part did you still have to judge, explain, or verify yourself?
+
+**Purpose:** capture AI as a conceptual-learning tool rather than merely an answer generator.
+
+#### PSYC224 Statistics
+
+> Describe one time the AI helped you understand a statistical idea or an R problem. What did it help with, and what did you still have to determine, check, or interpret yourself?
+
+**Purpose:** capture tutoring/troubleshooting use while preserving learner responsibility for statistical reasoning and interpretation.
+
+#### PSYC330 Lifespan Developmental Psychology
+
+> Use the AI on a developmental claim or source-based question from this course. What did it help you locate or understand, and what did you still have to judge, interpret, or verify yourself?
+
+**Purpose:** capture course-content and source-supported reasoning rather than generic AI satisfaction.
+
+---
+
 ### 8. `BBX-PILOT-OPEN` — Transfer + implementation friction
 
-**Type:** paragraph  
+**Type:** short answer / paragraph-length response  
 **When:** Final checkpoint before submission.
 
 > After doing these experiments, what is one thing you expect to do differently when you use AI for coursework? Also tell us one part of BoodleBox or this toolkit that was confusing, limiting, or not worth the effort. If nothing fits either part, say that rather than inventing an answer.
@@ -160,7 +198,7 @@ Options:
 
 ## Estimated burden
 
-Eight Form items, but only six require writing and all are distributed across work students are already doing. Two are single-click observations. Target total writing: roughly 8–12 concise sentences across the entire toolkit.
+Eight Form items total. Six require writing; two are single-click observations. Target total writing remains roughly 8–12 concise sentences distributed across work students are already doing.
 
 This should be lower-friction than opening, maintaining, saving, and submitting a separate Word document while producing better analyzable data.
 
@@ -177,7 +215,7 @@ A misconception can earn full participation credit. A polished but generic answe
 
 ## Analysis plan
 
-### Instructional/AI-literacy targets
+### Shared AI-literacy targets
 
 Use the course-specific canonical responses to assess:
 
@@ -187,13 +225,24 @@ Use the course-specific canonical responses to assess:
 
 Do not infer those understandings from observation items alone.
 
+### Course-context themes
+
+Use `BBX-COURSE-USE` to examine different instructional roles for AI:
+
+- **PSYC220:** conceptual differentiation, comparison, explanation, and learner judgment;
+- **PSYC224:** statistical tutoring, R troubleshooting, interpretation, and checking;
+- **PSYC330:** developmental-content reasoning, source use, interpretation, and verification.
+
+The prompt ID stays constant so the same analytic pipeline can recognize the item, but the prompt text and coding frame remain course-specific.
+
 ### Pilot qualitative themes
 
-Code `BBX-SETUP-EVID`, `BBX-MODEL-DIFF`, and `BBX-PILOT-OPEN` for themes such as:
+Code `BBX-SETUP-EVID`, `BBX-COURSE-USE`, and `BBX-PILOT-OPEN` for themes such as:
 
 - configuration strategies students actually use;
 - course sources students find useful as context;
-- task-dependent model preferences and why;
+- ways students use AI for actual disciplinary work;
+- what students retain as learner-owned judgment;
 - reported changes in intended AI behavior;
 - BoodleBox usability/friction;
 - toolkit activities perceived as useful or unhelpful;
@@ -203,10 +252,11 @@ Begin with a small provisional codebook, but preserve an `other/emergent` route 
 
 ## Course separation and aggregation
 
-Build separate instances for each pilot course, for example:
+Build three separate v1 instances:
 
-- `PSYC220 / 2026FA / <section> / AI-BBX-ONBOARD-01 / v1`
-- `PSYC330 / 2026FA / <section> / AI-BBX-ONBOARD-01 / v1`
+- `PSYC220 / 2026FA / 01 / AI-BBX-ONBOARD-01 / v1`
+- `PSYC224 / 2026FA / 01 / AI-BBX-ONBOARD-01 / v1`
+- `PSYC330 / 2026FA / 01 / AI-BBX-ONBOARD-01 / v1`
 
 Each course keeps its own roster-valid codes, Form, response workbook, normalized data, and instructor-facing participation review.
 
@@ -214,7 +264,7 @@ For the cross-course pilot layer, retain only instructor-reviewed de-identified 
 
 ## What this replaces
 
-Once the Form is production-tested and linked from the BoodleBox toolkit:
+Once all three Forms are production-tested and linked from the BoodleBox toolkit:
 
 - remove the requirement to download/maintain/submit `AI-Toolkit-Check-In.docx`;
 - replace the existing inline `Check-in` cues with direct links/cues to the relevant Form checkpoints;
@@ -229,8 +279,10 @@ These responses can be used immediately for instruction, participation preparati
 
 ## Next implementation gate
 
-1. Instantiate `AI-BBX-ONBOARD-01` v1 in the Form Factory for PSYC220 and PSYC330 using their course/section scope.
-2. Synthetic-test one instance end to end with an unknown four-digit code, then remove the synthetic Form response and rebuild to clean zero-state before student use.
-3. Insert distributed Check-In cues/links into the existing BoodleBox toolkit pages.
-4. Remove the Word-document requirement from the student and faculty paths.
-5. After the first real cohort completes it, audit response quality before changing the prompt set. Do not add more questions unless the first data show a specific information gap.
+1. Prepare Form Factory v1 specs for PSYC220, PSYC224, and PSYC330 with the seven common items plus the appropriate `BBX-COURSE-USE` wording.
+2. After the remaining Gemini/Form Factory v0.3.3 cleanup is installed and the Gemini production Form is returned to clean zero-state, load and build the three BoodleBox instances.
+3. Synthetic-test PSYC224 first because the current Form Factory/roster path is already exercised there; then verify the PSYC220 and PSYC330 roster counts during build.
+4. Remove each synthetic Form response and rebuild each response workbook to clean zero-state before student use.
+5. Insert distributed Check-In cues/links into the existing BoodleBox toolkit pages.
+6. Remove the Word-document requirement from the student and faculty paths only after the replacement Forms are production-tested.
+7. After the first real cohort completes the Check-In, audit response quality before changing the prompt set. Do not add more questions unless the first data show a specific information gap.
