@@ -1,0 +1,75 @@
+{
+  "course": "PSYC220",
+  "term": "2026FA",
+  "section": "01",
+  "activity_id": "AI-BBX-ONBOARD-01",
+  "spec_version": 1,
+  "title": "BoodleBox AI Learning Check-In",
+  "topic": "AI Literacy: Configuration, Verification, Sycophancy, Cognitive Offloading, and Course Use",
+  "date": "2026-08-29",
+  "delivery": "out_of_class",
+  "participation_rubric": "participation_0_3",
+  "instructions": "Work through the BoodleBox Student AI Toolkit as directed and keep this Check-In open in another tab. Answer each checkpoint from your own observations and reasoning. Model behavior may vary; you are graded for substantive engagement, not for getting a particular model response or for having the correct interpretation on the first try. Use BoodleBox and the assigned AI tools for the toolkit experiments, but do not ask AI to write your Check-In responses for you.",
+  "prompts": [
+    {
+      "prompt_id": "BBX-SETUP-EVID",
+      "text": "Name the course bot you built, one or two course sources you added, and one tutor instruction or configuration choice you made. What were you trying to make the bot do differently with that choice?",
+      "type": "short_answer",
+      "required": true
+    },
+    {
+      "prompt_id": "BBX-SYC-OBS",
+      "text": "When you repeatedly pushed the false claim, what best describes the model's behavior?",
+      "type": "multiple_choice",
+      "options": [
+        "It held its ground and continued to reject the false claim.",
+        "It softened or became less certain without fully reversing.",
+        "It reversed or substantially moved toward my false claim.",
+        "The interaction was mixed or difficult to classify."
+      ],
+      "required": true
+    },
+    {
+      "prompt_id": "BBX-SYC-INTERP",
+      "text": "Whether your model held its ground or bent toward you, what would you need before treating a model's change toward your position as evidence that you were actually right? Explain briefly using what happened in your interaction.",
+      "type": "short_answer",
+      "required": true
+    },
+    {
+      "prompt_id": "BBX-CITE-OBS",
+      "text": "After opening the source and reading the relevant passage yourself, how well did it support the factual claim you checked?",
+      "type": "multiple_choice",
+      "options": [
+        "Direct support",
+        "Partial support",
+        "No support",
+        "I could not determine the degree of support"
+      ],
+      "required": true
+    },
+    {
+      "prompt_id": "BBX-CITE-REASON",
+      "text": "What did opening the source let you determine that seeing the AI provide a citation or link by itself could not tell you?",
+      "type": "short_answer",
+      "required": true
+    },
+    {
+      "prompt_id": "BBX-OFFLOAD",
+      "text": "Choose one real assignment or study task from this course. Name one part AI could appropriately support and one part you should probably do yourself because doing that cognitive work is what produces the learning. Explain why you divided the work that way in 2–4 sentences.",
+      "type": "short_answer",
+      "required": true
+    },
+    {
+      "prompt_id": "BBX-COURSE-USE",
+      "text": "Use your course bot on a question that requires you to distinguish or connect two cognitive psychology ideas. What did the AI help you see, and what part did you still have to judge, explain, or verify yourself?",
+      "type": "short_answer",
+      "required": true
+    },
+    {
+      "prompt_id": "BBX-PILOT-OPEN",
+      "text": "After doing these experiments, what is one thing you expect to do differently when you use AI for coursework? Also tell us one part of BoodleBox or this toolkit that was confusing, limiting, or not worth the effort. If nothing fits either part, say that rather than inventing an answer.",
+      "type": "short_answer",
+      "required": true
+    }
+  ]
+}
